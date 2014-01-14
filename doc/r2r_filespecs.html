@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>r2r_filespecs</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content="r2r_filespecs"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2014-01-14T07:33-0500"/>
+<meta name="author" content="Drumbeat"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">r2r_filespecs</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Introduction</a></li>
+<li><a href="#sec-2">2 /shipdata/cruise_maint</a>
+<ul>
+<li><a href="#sec-2-1">2.1 logbooks.csv - List of logbooks served by elog-dev server</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 /shipddata/cruise_maint/bin</a>
+<ul>
+<li><a href="#sec-3-1">3.1 cruise_toarchive - moves recently completed cruise eventlog to /shipdata/archive</a></li>
+<li><a href="#sec-3-2">3.2 cruise_serve - makes archived cruise eventlog web-accessible on elog-dev.whoi.edu</a></li>
+<li><a href="#sec-3-3">3.3 cruise_vocab - process vocab terms found in archived cruise eventlog</a></li>
+<li><a href="#sec-3-4">3.4 cruise_assess - assess quality of archived cruise eventlog</a></li>
+<li><a href="#sec-3-5">3.5 vocab_getNVS - put fresh copies of NVS vocabs in /shipdata/cruise_maint/vocabs</a></li>
+<li><a href="#sec-3-6">3.6 vocab_getR2R - put fresh copies of R2R vocabs in /shipdata/cruise_maint/vocabs</a></li>
+<li><a href="#sec-3-7">3.7 vocab_ecfmvoc - create new instruements.csv, actions.csv, etc file in /shipdata/cruise_maint/ecfmvoc</a></li>
+<li><a href="#sec-3-8">3.8 logbook_listattr - given an elog attribute lists values assigned to that attribute during a cruise</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 /shipdata/cruise_maint/ecfm_voc</a>
+<ul>
+<li><a href="#sec-4-1">4.1 actions.csv - actions used in ECFM configs</a></li>
+<li><a href="#sec-4-2">4.2 activitytype.tsv - obsolete or still used?</a></li>
+<li><a href="#sec-4-3">4.3 instactionmap.csv - what actions can instruments perform?</a></li>
+<li><a href="#sec-4-4">4.4 instruments.csv - instruments used in ECFM configs</a></li>
+<li><a href="#sec-4-5">4.5 organization.tsv - organizations used in ECFM configs</a></li>
+<li><a href="#sec-4-6">4.6 person.tsv - participants list used in ECFM configs</a></li>
+<li><a href="#sec-4-7">4.7 vessel.tsv - vessels used in ECFM configs</a></li>
+<li><a href="#sec-4-8">4.8 termlist_actions.csv - terms to be included in actions.csv</a></li>
+<li><a href="#sec-4-9">4.9 termlist_instruments.csv - terms to be included in instruments.csv</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5 /shipdata/cruise_maint/vocabs</a>
+<ul>
+<li><a href="#sec-5-1">5.1 nvs_inst_vocab.csv - NVS-defined instrument terms curr used in ECFM</a></li>
+<li><a href="#sec-5-2">5.2 nvs_action_vocab.csv - NVS-defined action terms curr used in ECFM (does not exist yet)</a></li>
+<li><a href="#sec-5-3">5.3 r2r_inst_vocab.csv - R2R-defined instrument terms curr used in ECFM</a></li>
+<li><a href="#sec-5-4">5.4 r2r_action_vocab.csv - R2R-defined action terms used in ECFM</a></li>
+<li><a href="#sec-5-5">5.5 r2r_person_vocab.csv - R2R-defined people terms used in ECFM</a></li>
+</ul>
+</li>
+<li><a href="#sec-6">6 Vocabulary term candidate files</a>
+<ul>
+<li><a href="#sec-6-1">6.1 nvs_inst_candidates.csv</a></li>
+<li><a href="#sec-6-2">6.2 nvs_action_candidates.csv</a></li>
+<li><a href="#sec-6-3">6.3 r2r_inst_candidates.csv</a></li>
+<li><a href="#sec-6-4">6.4 r2r_action_candidates.csv</a></li>
+<li><a href="#sec-6-5">6.5 r2r_person_candidates.csv</a></li>
+<li><a href="#sec-6-6">6.6 r2r_organization_candidates.csv</a></li>
+<li><a href="#sec-6-7">6.7 r2r_instactionmap_candidates.csv</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7 /shipdata/cruise_maint/cruises/&lt;cruiseid&gt;</a>
+<ul>
+<li><a href="#sec-7-1">7.1 elogd.cfg - latest cruise elogd.cfg</a></li>
+<li><a href="#sec-7-2">7.2 ecfm_cruisemeta.csv - cruise metadata from elogd.cfg</a></li>
+<li><a href="#sec-7-3">7.3 ecfm_instruments.csv - instruments from elogd.cfg</a></li>
+<li><a href="#sec-7-4">7.4 ecfm_actions.csv - actions from elogd.cfg</a></li>
+<li><a href="#sec-7-5">7.5 ecfm_person.csv - persons from elogd.cfg</a></li>
+<li><a href="#sec-7-6">7.6 novoc_actions.csv - actions not in NVS or R2R vocabs</a></li>
+<li><a href="#sec-7-7">7.7 novoc_instruments.csv - instruments in NVS or R2R vocabs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+
+<p>This file provides descriptions of vocabluary and application files used by ECFM
+</p></div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> /shipdata/cruise_maint</h2>
+<div class="outline-text-2" id="text-2">
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> logbooks.csv - List of logbooks served by elog-dev server</h3>
+<div class="outline-text-3" id="text-2-1">
+
+<p>Created:'maintained by hand
+Sample Records:
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="right" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Logbook</th><th scope="col" class="right">CruiseYear</th><th scope="col" class="left">ConfigFile</th><th scope="col" class="left">LogbbookDir</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">AE1211-SE</td><td class="right">2012</td><td class="left">shipdata/AE-X1211/r2r/eventlog/elog/elogd.cfg</td><td class="left">shipdata/archive/2012/elog/logbooks/ae/AE1211-SE</td></tr>
+<tr><td class="left">al130801-SE</td><td class="right">2013</td><td class="left">shipdata/al130801/r2r/eventlog/elog/elogd.cfg</td><td class="left">shipdata/archive/2013/elog/logbooks/al/al130801-SE</td></tr>
+<tr><td class="left">AT18-06-DS</td><td class="right">2011</td><td class="left">shipdata/at18-06/r2r/eventlog/elog/elogd.cfg</td><td class="left">shipdata/archive/2011/elog/logbooks/at/AT18-06-DS</td></tr>
+</tbody>
+</table>
+
+
+<p>
+Column Descriptions:
+</p><ul>
+<li><b>Logbook</b> - Name of the logbook (as designated in the configuration file)                          
+</li>
+<li><b>CruiseYear</b> - Year the cruise associated with the logbook took place in                              
+</li>
+<li><b>ConfigFile</b> - Last version of the configfile (elogd.cfg) that was used for logbook creation          
+</li>
+<li><b>LogbookDir</b> - Directory on elog-dev that the .log (and associated) files for this logbook are stored 
+</li>
+</ul>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> /shipddata/cruise_maint/bin</h2>
+<div class="outline-text-2" id="text-3">
+
+<p>This is a description of the scripts found in the /shipdata/cruise_maint/bin directory.
+General naming convention is &lt;thing-acting-on&gt;_&lt;thing-done&gt;.&lt;ext&gt;
+</p>
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> cruise_toarchive - moves recently completed cruise eventlog to /shipdata/archive</h3>
+<div class="outline-text-3" id="text-3-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> cruise_serve - makes archived cruise eventlog web-accessible on elog-dev.whoi.edu</h3>
+<div class="outline-text-3" id="text-3-2">
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> cruise_vocab - process vocab terms found in archived cruise eventlog</h3>
+<div class="outline-text-3" id="text-3-3">
+
+</div>
+
+</div>
+
+<div id="outline-container-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> cruise_assess - assess quality of archived cruise eventlog</h3>
+<div class="outline-text-3" id="text-3-4">
+
+</div>
+
+</div>
+
+<div id="outline-container-3-5" class="outline-3">
+<h3 id="sec-3-5"><span class="section-number-3">3.5</span> vocab_getNVS - put fresh copies of NVS vocabs in /shipdata/cruise_maint/vocabs</h3>
+<div class="outline-text-3" id="text-3-5">
+
+</div>
+
+</div>
+
+<div id="outline-container-3-6" class="outline-3">
+<h3 id="sec-3-6"><span class="section-number-3">3.6</span> vocab_getR2R - put fresh copies of R2R vocabs in /shipdata/cruise_maint/vocabs</h3>
+<div class="outline-text-3" id="text-3-6">
+
+</div>
+
+</div>
+
+<div id="outline-container-3-7" class="outline-3">
+<h3 id="sec-3-7"><span class="section-number-3">3.7</span> vocab_ecfmvoc - create new instruements.csv, actions.csv, etc file in /shipdata/cruise_maint/ecfmvoc</h3>
+<div class="outline-text-3" id="text-3-7">
+
+</div>
+
+</div>
+
+<div id="outline-container-3-8" class="outline-3">
+<h3 id="sec-3-8"><span class="section-number-3">3.8</span> logbook_listattr - given an elog attribute lists values assigned to that attribute during a cruise</h3>
+<div class="outline-text-3" id="text-3-8">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> /shipdata/cruise_maint/ecfm_voc</h2>
+<div class="outline-text-2" id="text-4">
+
+
+</div>
+
+<div id="outline-container-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> actions.csv - actions used in ECFM configs</h3>
+<div class="outline-text-3" id="text-4-1">
+
+<p>Currently used to fillin the Action attribute in cruise logs
+Created: <b>cat r2r_action_vocab.csv &gt; actions.csv</b>
+Sample Records:
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">ActionTerm</th><th scope="col" class="left">ActionID</th><th scope="col" class="left">ActionDescription</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">abort</td><td class="left">R2RE/1035</td><td class="left">Aborted device operations</td></tr>
+<tr><td class="left">cruiseEnd</td><td class="left">R2RE/1036</td><td class="left">Research cruise ended</td></tr>
+</tbody>
+</table>
+
+
+<p>
+Column Descriptions:
+</p><ul>
+<li><b>ActionTerm</b> - term description goes here
+</li>
+<li>ActionID                              
+</li>
+<li>ActionDescription                     
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> activitytype.tsv - obsolete or still used?</h3>
+<div class="outline-text-3" id="text-4-2">
+
+<p>Obsolete? Not sure where this file came from
+Created: <b>Obsolete?</b>
+Sample Records:
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">ActivityType</th><th scope="col" class="left">Description</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">abort</td><td class="left">device sampling has been aborted</td></tr>
+<tr><td class="left">abortLine</td><td class="left">research vessel has aborted a line from one station (waypoint) to another</td></tr>
+<tr><td class="left">arrivePort</td><td class="left">research vessel has arrived in port</td></tr>
+<tr><td class="left">calibrate</td><td class="left">device has been (re)calibrated</td></tr>
+</tbody>
+</table>
+
+
+<p>
+Column Descriptions:
+</p><ul>
+<li>ActivityType
+</li>
+<li>Description
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> instactionmap.csv - what actions can instruments perform?</h3>
+<div class="outline-text-3" id="text-4-3">
+
+<p>Created:
+Sample Records:
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">EventTerm</th><th scope="col" class="left">DefaultActionTerms</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">ADCP75</td><td class="left">start;stop;service;other</td></tr>
+<tr><td class="left">ADCP150</td><td class="left">start;stop;service;other</td></tr>
+<tr><td class="left">ADCP300</td><td class="left">star;stop;service;other</td></tr>
+<tr><td class="left">biologyPump</td><td class="left">startSample;stopSample</td></tr>
+</tbody>
+</table>
+
+
+<p>
+Column Descriptions:
+</p><ul>
+<li>EventTerm                       
+</li>
+<li>DefaultActionTerms              
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> instruments.csv - instruments used in ECFM configs</h3>
+<div class="outline-text-3" id="text-4-4">
+
+<p>Created:
+Sample Records:
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">DeviceID</th><th scope="col" class="left">DeviceTerm</th><th scope="col" class="left">DeviceCatID</th><th scope="col" class="left">DeviceCatTerm</th><th scope="col" class="left">DefaultInstrumentTerm</th><th scope="col" class="left">DeviceDescription</th><th scope="col" class="left">Notes</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">R2RE/1027</td><td class="left">Academic Research Vessel</td><td class="left">R2RE/1006</td><td class="left">research vessel</td><td class="left">Ship</td><td class="left">Academic Research Vessel description &hellip;</td><td class="left"></td></tr>
+<tr><td class="left">R2RE/9011</td><td class="left">acqsys r2r_devtype</td><td class="left">R2RE/9010</td><td class="left">data acquisition system</td><td class="left">Acqsys</td><td class="left">de/multiplexing and timetagging data &hellip;</td><td class="left"></td></tr>
+<tr><td class="left">R2RE/9012</td><td class="left">adcp r2r_devtype</td><td class="left">L05/115</td><td class="left">current profilers</td><td class="left">ADCP</td><td class="left">(acoustic doppler current profiler) &hellip;</td><td class="left"></td></tr>
+<tr><td class="left">R2RE/9013</td><td class="left">anemometer r2r_devtype</td><td class="left">L05/102</td><td class="left">meteorological packages</td><td class="left">Anemometer</td><td class="left">measures wind speed and direction</td><td class="left">L221/TOOL0269</td></tr>
+</tbody>
+</table>
+
+
+<p>
+Column Descriptions:
+</p><ul>
+<li>DeviceID :
+</li>
+<li>DeviceTerm          
+</li>
+<li>DeviceCatID
+</li>
+<li>DeviceCatTerm
+</li>
+<li>DefaultInstrumentTerm
+</li>
+<li>DeviceDescription
+</li>
+<li>Notes
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-5" class="outline-3">
+<h3 id="sec-4-5"><span class="section-number-3">4.5</span> organization.tsv - organizations used in ECFM configs</h3>
+<div class="outline-text-3" id="text-4-5">
+
+<p>Created: Copied from rvdata.us webservice
+Sample Records:
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">OrganizationID</th><th scope="col" class="left">Name</th><th scope="col" class="left">Acronym</th><th scope="col" class="left">CountryID</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">com.3phoenix</td><td class="left">3Phoenix, Inc.</td><td class="left">3Phoenix</td><td class="left">us</td></tr>
+<tr><td class="left">tw.edu.sinica</td><td class="left">Academia Sinica</td><td class="left">Sinica</td><td class="left">tw</td></tr>
+<tr><td class="left">com.aecom.ensr</td><td class="left">AECOM/ENSR</td><td class="left">ENSR</td><td class="left">us</td></tr>
+<tr><td class="left">com.alionscience</td><td class="left">Alion Science and Technology</td><td class="left">Alion</td><td class="left">us</td></tr>
+</tbody>
+</table>
+
+
+<p>
+Column Descriptions:
+</p><ul>
+<li>OrganizationID              
+</li>
+<li>Name                        
+</li>
+<li>Acronym                     
+</li>
+<li>CountryID                   
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-6" class="outline-3">
+<h3 id="sec-4-6"><span class="section-number-3">4.6</span> person.tsv - participants list used in ECFM configs</h3>
+<div class="outline-text-3" id="text-4-6">
+
+<p>Created: Copied from rvdata.us webservice
+Sample Records:
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="right" /><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="right">PersonID</th><th scope="col" class="left">FullName</th><th scope="col" class="left">ShortName</th><th scope="col" class="left">InstitutionID</th></tr>
+</thead>
+<tbody>
+<tr><td class="right">100369</td><td class="left">Aalto, Kathryn</td><td class="left">kAalto</td><td class="left"></td></tr>
+<tr><td class="right">100370</td><td class="left">Aaron, Ernie</td><td class="left">eAaron</td><td class="left">SIO</td></tr>
+<tr><td class="right">102077</td><td class="left">Abernethy, Arreana</td><td class="left">aAbernethy</td><td class="left">UW</td></tr>
+</tbody>
+</table>
+
+
+<p>
+Column Descriptions:
+</p><ul>
+<li>PersonID                   
+</li>
+<li>FullName                   
+</li>
+<li>ShortName                  
+</li>
+<li>InstitutionID              
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-7" class="outline-3">
+<h3 id="sec-4-7"><span class="section-number-3">4.7</span> vessel.tsv - vessels used in ECFM configs</h3>
+<div class="outline-text-3" id="text-4-7">
+
+<p>Created: Copied from rvdata.us webservice
+Sample Records:
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="right" /><col class="right" /><col class="right" /><col class="right" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Prefix</th><th scope="col" class="left">VesselName</th><th scope="col" class="left">ICESCode</th><th scope="col" class="left">OperatorName</th><th scope="col" class="left">CallSign</th><th scope="col" class="right">MMSINumber</th><th scope="col" class="right">Length(m)</th><th scope="col" class="right">MaxSpeed(m/s)</th><th scope="col" class="right">MaxDraft(m)</th><th scope="col" class="left">Designation</th><th scope="col" class="left">Active</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">HX</td><td class="left">Alpha Helix</td><td class="left">31HX</td><td class="left">UAF</td><td class="left">WSD7078</td><td class="right">368625000</td><td class="right">40.5</td><td class="right">5.4</td><td class="right">4.2</td><td class="left"></td><td class="left">f</td></tr>
+<tr><td class="left">AE</td><td class="left">Atlantic Explorer</td><td class="left">33H4</td><td class="left">BIOS</td><td class="left">WDC9417</td><td class="right">303591000</td><td class="right">52.1</td><td class="right">5.7</td><td class="right">3.4</td><td class="left"></td><td class="left">t</td></tr>
+<tr><td class="left">AT</td><td class="left">Atlantis</td><td class="left">33AT</td><td class="left">WHOI</td><td class="left">KAQP</td><td class="right">367241000</td><td class="right">83.5</td><td class="right">7.7</td><td class="right">5</td><td class="left">AGOR-25</td><td class="left">t</td></tr>
+</tbody>
+</table>
+
+
+<p>
+Column Descriptions:
+</p><ul>
+<li>Prefix                     
+</li>
+<li>VesselName                 
+</li>
+<li>ICESCode                   
+</li>
+<li>OperatorName               
+</li>
+<li>CallSign                   
+</li>
+<li>MMSINumber                 
+</li>
+<li>Length(m)                  
+</li>
+<li>MaxSpeed(m/s)              
+</li>
+<li>MaxDraft(m)                
+</li>
+<li>Designation              
+</li>
+<li>Active
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4-8" class="outline-3">
+<h3 id="sec-4-8"><span class="section-number-3">4.8</span> termlist_actions.csv - terms to be included in actions.csv</h3>
+<div class="outline-text-3" id="text-4-8">
+
+</div>
+
+</div>
+
+<div id="outline-container-4-9" class="outline-3">
+<h3 id="sec-4-9"><span class="section-number-3">4.9</span> termlist_instruments.csv - terms to be included in instruments.csv</h3>
+<div class="outline-text-3" id="text-4-9">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> /shipdata/cruise_maint/vocabs</h2>
+<div class="outline-text-2" id="text-5">
+
+<p>These are R2R and NVS vocabulary terms in CSV format
+Maintained by routiines vocab_nvs_get and vocab_r2r_get
+</p>
+</div>
+
+<div id="outline-container-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> nvs_inst_vocab.csv - NVS-defined instrument terms curr used in ECFM</h3>
+<div class="outline-text-3" id="text-5-1">
+
+</div>
+
+</div>
+
+<div id="outline-container-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> nvs_action_vocab.csv - NVS-defined action terms curr used in ECFM (does not exist yet)</h3>
+<div class="outline-text-3" id="text-5-2">
+
+</div>
+
+</div>
+
+<div id="outline-container-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> r2r_inst_vocab.csv - R2R-defined instrument terms curr used in ECFM</h3>
+<div class="outline-text-3" id="text-5-3">
+
+</div>
+
+</div>
+
+<div id="outline-container-5-4" class="outline-3">
+<h3 id="sec-5-4"><span class="section-number-3">5.4</span> r2r_action_vocab.csv - R2R-defined action terms used in ECFM</h3>
+<div class="outline-text-3" id="text-5-4">
+
+</div>
+
+</div>
+
+<div id="outline-container-5-5" class="outline-3">
+<h3 id="sec-5-5"><span class="section-number-3">5.5</span> r2r_person_vocab.csv - R2R-defined people terms used in ECFM</h3>
+<div class="outline-text-3" id="text-5-5">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Vocabulary term candidate files</h2>
+<div class="outline-text-2" id="text-6">
+
+<p>Entries in R2R logbooks not yet entered into NVS or R2R vocabularies
+</p>
+</div>
+
+<div id="outline-container-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> nvs_inst_candidates.csv</h3>
+<div class="outline-text-3" id="text-6-1">
+
+<p>Same format as instruments.csv
+</p></div>
+
+</div>
+
+<div id="outline-container-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> nvs_action_candidates.csv</h3>
+<div class="outline-text-3" id="text-6-2">
+
+<p>Same format as actions.csv
+</p></div>
+
+</div>
+
+<div id="outline-container-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> r2r_inst_candidates.csv</h3>
+<div class="outline-text-3" id="text-6-3">
+
+<p>Same format as instruments.csv
+</p></div>
+
+</div>
+
+<div id="outline-container-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> r2r_action_candidates.csv</h3>
+<div class="outline-text-3" id="text-6-4">
+
+</div>
+
+</div>
+
+<div id="outline-container-6-5" class="outline-3">
+<h3 id="sec-6-5"><span class="section-number-3">6.5</span> r2r_person_candidates.csv</h3>
+<div class="outline-text-3" id="text-6-5">
+
+</div>
+
+</div>
+
+<div id="outline-container-6-6" class="outline-3">
+<h3 id="sec-6-6"><span class="section-number-3">6.6</span> r2r_organization_candidates.csv</h3>
+<div class="outline-text-3" id="text-6-6">
+
+</div>
+
+</div>
+
+<div id="outline-container-6-7" class="outline-3">
+<h3 id="sec-6-7"><span class="section-number-3">6.7</span> r2r_instactionmap_candidates.csv</h3>
+<div class="outline-text-3" id="text-6-7">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> /shipdata/cruise_maint/cruises/&lt;cruiseid&gt;</h2>
+<div class="outline-text-2" id="text-7">
+
+<p>Files found in cruises/&lt;cruiseid&gt; subdirectory
+</p>
+</div>
+
+<div id="outline-container-7-1" class="outline-3">
+<h3 id="sec-7-1"><span class="section-number-3">7.1</span> elogd.cfg - latest cruise elogd.cfg</h3>
+<div class="outline-text-3" id="text-7-1">
+
+<p>Copied from cruise distribution, in elog.cfg format
+</p></div>
+
+</div>
+
+<div id="outline-container-7-2" class="outline-3">
+<h3 id="sec-7-2"><span class="section-number-3">7.2</span> ecfm_cruisemeta.csv - cruise metadata from elogd.cfg</h3>
+<div class="outline-text-3" id="text-7-2">
+
+<p>Cruise metadata extracted from elogd.cfg
+Created:
+Sample Records:
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">cruiseid</th><th scope="col" class="left">ship</th><th scope="col" class="left">three</th><th scope="col" class="left">four</th><th scope="col" class="left">five</th><th scope="col" class="left">six</th><th scope="col" class="left">seven</th><th scope="col" class="left">eight</th><th scope="col" class="left">nine</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">al130801</td><td class="left">R/V M/Y Alucia</td><td class="left"></td><td class="left"></td><td class="left"></td><td class="left"></td><td class="left"></td><td class="left"></td><td class="left"></td></tr>
+</tbody>
+</table>
+
+
+<p>
+Column Descriptions:
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Header</th><th scope="col" class="left">Description</th></tr>
+</thead>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-7-3" class="outline-3">
+<h3 id="sec-7-3"><span class="section-number-3">7.3</span> ecfm_instruments.csv - instruments from elogd.cfg</h3>
+<div class="outline-text-3" id="text-7-3">
+
+<p>Instruments extracted from elogd.cfg
+Created:
+Sample Records:
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="left" /><col class="right" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">DeviceID</th><th scope="col" class="left">DeviceTerm</th><th scope="col" class="left">DeviceCatID</th><th scope="col" class="left">DeviceCatTerm</th><th scope="col" class="left">DefaultInstrumentTerm</th><th scope="col" class="left">DeviceDescription</th><th scope="col" class="left">AttrNameUsed</th><th scope="col" class="left">ActionsUsed</th><th scope="col" class="right">State</th></tr>
+</thead>
+<tbody>
+<tr><td class="left">R2RE/1027</td><td class="left">Academic Research Vessel</td><td class="left">R2RE/1006</td><td class="left">research vessel</td><td class="left">Ship</td><td class="left">Academic Research Vessel description goes here</td><td class="left">Ship</td><td class="left">startCruise;endCruise;other</td><td class="right">0</td></tr>
+<tr><td class="left">R2RE/1057</td><td class="left">F185_MRU</td><td class="left">R2RE/1010</td><td class="left">user specified</td><td class="left">UserSpecified</td><td class="left">Coda Octopus F185+ Motion Reference Unit</td><td class="left">F185</td><td class="left">startCalibration;endCalibration;other</td><td class="right">3</td></tr>
+</tbody>
+</table>
+
+Column Descriptions:
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Header</th><th scope="col" class="left">Description</th></tr>
+</thead>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-7-4" class="outline-3">
+<h3 id="sec-7-4"><span class="section-number-3">7.4</span> ecfm_actions.csv - actions from elogd.cfg</h3>
+<div class="outline-text-3" id="text-7-4">
+
+<p>Actions extracted from elogd.cfg
+Created:
+Sample Records:
+</p>
+<p>
+Column Descriptions:
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Header</th><th scope="col" class="left">Description</th></tr>
+</thead>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-7-5" class="outline-3">
+<h3 id="sec-7-5"><span class="section-number-3">7.5</span> ecfm_person.csv - persons from elogd.cfg</h3>
+<div class="outline-text-3" id="text-7-5">
+
+<p>Persons extracted from elogd.cfg
+Created:
+Sample Records:
+</p>
+<p>
+Column Descriptions:
+</p><table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<colgroup><col class="left" /><col class="left" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="left">Header</th><th scope="col" class="left">Description</th></tr>
+</thead>
+</table>
+
+</div>
+
+</div>
+
+<div id="outline-container-7-6" class="outline-3">
+<h3 id="sec-7-6"><span class="section-number-3">7.6</span> novoc_actions.csv - actions not in NVS or R2R vocabs</h3>
+<div class="outline-text-3" id="text-7-6">
+
+</div>
+
+</div>
+
+<div id="outline-container-7-7" class="outline-3">
+<h3 id="sec-7-7"><span class="section-number-3">7.7</span> novoc_instruments.csv - instruments in NVS or R2R vocabs</h3>
+<div class="outline-text-3" id="text-7-7">
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2014-01-14T07:33-0500</p>
+<p class="author">Author: Drumbeat</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

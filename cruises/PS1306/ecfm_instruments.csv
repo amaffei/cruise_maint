@@ -1,0 +1,5 @@
+DeviceID,DeviceTerm,DeviceCatID,DeviceCatTerm,DefaultInstrumentTerm,DeviceDescription,AttrNameUsed,ActionsUsed,State
+"R2RE/1057","Standard Lamont Ocean Bottom Seismometer","R2RE/1010","user specified","UserSpecified","Instrument that does not have a controlled vocabulary term","SL-OBS","deploy;recover;other","MODIFIED"
+"R2RE/1057", "Cascadia Lamont Ocean Bottom Seismometer", "R2RE/1010", "user specified", "UserSpecified", "Instrument that does not have a controlled vocabulary term", "CL-OBS", "other;deploy;recover", "MODIFIED"
+"R2RE/9039","generic 3.5kHz echosounder","L05/156","single-beam echosounders","Echosounder3.5","3.5 kHz echosounder of unknown make/model","Echosounder3.5","startLine;endLine;abortLine","0"
+"R2RE/1027","Academic Research Vessel","R2RE/1006","research vessel","Ship","Academic Research Vessel description goes here","Ship","startCruise;endCruise;other","0"

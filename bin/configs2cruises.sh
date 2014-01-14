@@ -1,0 +1,55 @@
+#!/bin/bash
+# Need to replace this with a real script in the future
+# Only runs on Andy's laptop at present
+#
+mkdir -p AE1211; cp -p ~drumbeat/tmp/shipdata/AE-X1211/r2r/eventlog/elog/elogd.cfg AE1211
+mkdir -p al130801; cp -p ~drumbeat/tmp/shipdata/al130801/r2r/eventlog/elog/elogd.cfg al130801
+mkdir -p AT18-06; cp -p ~drumbeat/tmp/shipdata/at18-06/r2r/eventlog/elog/elogd.cfg AT18-06
+mkdir -p AT18-06; cp -p ~drumbeat/tmp/shipdata/at18-06/r2r/eventlog/elog/elogd.cfg AT18-06
+mkdir -p AT18-12; cp -p ~drumbeat/tmp/shipdata/at18-12/r2r/eventlog/elog/elogd.cfg AT18-12
+mkdir -p AT18-12; cp -p ~drumbeat/tmp/shipdata/at18-12/r2r/eventlog/elog/elogd.cfg AT18-12
+mkdir -p AT18-13; cp -p ~drumbeat/tmp/shipdata/at18-13/r2r/eventlog/elog/elogd.cfg AT18-13
+mkdir -p AT18-13; cp -p ~drumbeat/tmp/shipdata/at18-13/r2r/eventlog/elog/elogd.cfg AT18-13
+mkdir -p AT18-14; cp -p ~drumbeat/tmp/shipdata/at18-14/r2r/eventlog/elog/elogd.cfg AT18-14
+mkdir -p AT18-18; cp -p ~drumbeat/tmp/shipdata/at18-18/r2r/eventlog/elog/elogd.cfg AT18-18
+mkdir -p AT18-18; cp -p ~drumbeat/tmp/shipdata/at18-18/r2r/eventlog/elog/elogd.cfg AT18-18
+mkdir -p at25; cp -p ~drumbeat/tmp/shipdata/at25/r2r/eventlog/elog/elogd.cfg at25
+mkdir -p at26-01; cp -p ~drumbeat/tmp/shipdata/at26-01/r2r/eventlog/elog/elogd.cfg at26-01
+mkdir -p at26-02; cp -p ~drumbeat/tmp/shipdata/at26-02/r2r/eventlog/elog/elogd.cfg at26-02
+mkdir -p at26-04; cp -p ~drumbeat/tmp/shipdata/at26-04/r2r/eventlog/elog/elogd.cfg at26-04
+mkdir -p en484; cp -p ~drumbeat/tmp/shipdata/en484/r2r/eventlog/elog/elogd.cfg en484
+mkdir -p en487; cp -p ~drumbeat/tmp/shipdata/en487/r2r/eventlog/elog/elogd.cfg en487
+mkdir -p EN502; cp -p ~drumbeat/tmp/shipdata/EN502/r2r/eventlog/elog/elogd.cfg EN502
+mkdir -p EN513; cp -p ~drumbeat/tmp/shipdata/EN513/r2r/eventlog/elog/elogd.cfg EN513
+mkdir -p EN520; cp -p ~drumbeat/tmp/shipdata/EN520/r2r/eventlog/elog/elogd.cfg EN520
+mkdir -p en524; cp -p ~drumbeat/tmp/shipdata/en524/r2r/eventlog/elog/elogd.cfg en524
+mkdir -p en527; cp -p ~drumbeat/tmp/shipdata/en527/r2r/eventlog/elog/elogd.cfg en527
+mkdir -p KN200-02; cp -p ~drumbeat/tmp/shipdata/kn200-02/r2r/eventlog/elog/elogd.cfg KN200-02
+mkdir -p KN205; cp -p ~drumbeat/tmp/shipdata/KN205/r2r/eventlog/elog/elogd.cfg KN205
+mkdir -p KN205; cp -p ~drumbeat/tmp/shipdata/KN205/r2r/eventlog/elog/elogd.cfg KN205
+mkdir -p KN207-01; cp -p ~drumbeat/tmp/shipdata/KN207-01/r2r/eventlog/elog/elogd.cfg KN207-01
+mkdir -p KN207-02; cp -p ~drumbeat/tmp/shipdata/KN207-02/r2r/eventlog/elog/elogd.cfg KN207-02
+mkdir -p KN207-03; cp -p ~drumbeat/tmp/shipdata/KN207-03/r2r/eventlog/elog/elogd.cfg KN207-03
+mkdir -p KN209-01; cp -p ~drumbeat/tmp/shipdata/KN209-01/r2r/eventlog/elog/elogd.cfg KN209-01
+mkdir -p KN210-04; cp -p ~drumbeat/tmp/shipdata/KN210-04/r2r/eventlog/elog/elogd.cfg KN210-04
+mkdir -p MGL1211; cp -p ~drumbeat/tmp/shipdata/MGL1211/r2r/eventlog/elog/elogd.cfg MGL1211
+mkdir -p MGL1305; cp -p ~drumbeat/tmp/shipdata/MGL1305/r2r/eventlog/elog/elogd.cfg MGL1305
+mkdir -p MV1108; cp -p ~drumbeat/tmp/shipdata/mv1108/r2r/eventlog/elog/elogd.cfg MV1108
+mkdir -p MV1206; cp -p ~drumbeat/tmp/shipdata/MV1206/r2r/eventlog/elog/elogd.cfg MV1206
+mkdir -p NH1208; cp -p ~drumbeat/tmp/shipdata/NH1208/r2r/eventlog/elog/elogd.cfg NH1208
+mkdir -p OC1206A; cp -p ~drumbeat/tmp/shipdata/OC1206A/r2r/eventlog/elog/elogd.cfg OC1206A
+mkdir -p OC1209A; cp -p ~drumbeat/tmp/shipdata/OC1209A/r2r/eventlog/elog/elogd.cfg OC1209A
+mkdir -p oc1307c; cp -p ~drumbeat/tmp/shipdata/oc1307c/r2r/eventlog/elog/elogd.cfg oc1307c
+mkdir -p OC1308A; cp -p ~drumbeat/tmp/shipdata/OC1308A/r2r/eventlog/elog/elogd.cfg OC1308A
+mkdir -p oc1308B; cp -p ~drumbeat/tmp/shipdata/oc1308B/r2r/eventlog/elog/elogd.cfg oc1308B
+mkdir -p OC462; cp -p ~drumbeat/tmp/shipdata/oc462/r2r/eventlog/elog/elogd.cfg OC462
+mkdir -p OC467; cp -p ~drumbeat/tmp/shipdata/oc467/r2r/eventlog/elog/elogd.cfg OC467
+mkdir -p OC468-02; cp -p ~drumbeat/tmp/shipdata/oc468/r2r/eventlog/elog/elogd.cfg OC468-02
+mkdir -p OC473; cp -p ~drumbeat/tmp/shipdata/oc473/r2r/eventlog/elog/elogd.cfg OC473
+mkdir -p OC475; cp -p ~drumbeat/tmp/shipdata/oc475/r2r/eventlog/elog/elogd.cfg OC475
+mkdir -p OC475; cp -p ~drumbeat/tmp/shipdata/oc475/r2r/eventlog/elog/elogd.cfg OC475
+mkdir -p OC476-01; cp -p ~drumbeat/tmp/shipdata/oc476-01/r2r/eventlog/elog/elogd.cfg OC476-01
+mkdir -p PS1306; cp -p ~drumbeat/tmp/shipdata/PS1306/r2r/eventlog/elog/elogd.cfg PS1306
+mkdir -p RR1301; cp -p ~drumbeat/tmp/shipdata/RR1301/r2r/eventlog/elog/elogd.cfg RR1301
+mkdir -p TN268; cp -p ~drumbeat/tmp/shipdata/tn268/r2r/eventlog/elog/elogd.cfg TN268
+mkdir -p tn299; cp -p ~drumbeat/tmp/shipdata/tn299/r2r/eventlog/elog/elogd.cfg tn299

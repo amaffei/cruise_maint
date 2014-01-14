@@ -1,0 +1,42 @@
+* Introduction
+This document provides descriptions, policies and scripts used to process vocabulary terms associated with the R2R eventlog project. The source is maintained as an org-mode file, accessed using the emacs environment. The directory containing this file and other files related to it can be found at the [[https://github.com/amaffei/r2relogvocabs][GitHub repository]].
+* GIT
+We will use git to maintain the code and do versioning on vocab files.
+Best video tutorial on git I've found so far -- http://www.youtube.com/watch?v=OFkgSjRnay4
+* R2R Vocabulary Workflow overview
+The R2R Eventlogger is an application that provides oceanographers with a way to record events that happen during a research cruise. This application is base on the [[https://midas.psi.ch/elog/][ELOG Weblog]] open source package. The R2R project has modified this software so that controlled vocabularies can be used to configure participants, instruments, intstrument actions, and organizations at the start of a cruise.
+
+In addition to making use of a given set of controlled vocabulary terms, oceanographers are allowed to create and insert new terms, specific to their own research needs. It is up to the R2R project whether or not to add these to it's own controlled vocabularies or oceanographic community vocabularies.
+
+The preferred oceanographic community vocabularies are served as a service of the [[http://www.bodc.ac.uk/products/web_services/vocab/][NERC Vocabulary Server (NVS)]], that is supported and maintained by the [[http://www.bodc.ac.uk/][British Oceanographic Data Centre]]. 
+
+The workflow described here only handles instrument and instrument action vocabulary terms.
+** Workflow diagram
+The following is a diagram shows how configuration files, returned from past oceanographic research cruises, are processed by the R2R project. The goal of this project is to provide the following outputs:
+- an updated list of controlled vocabulary terms to be integrated into future releases of the R2R Eventlogger webapp.
+- a list of new/modified controlled vocabulary terms to be submitted to the NVS governance process so that the pertinent vocabularies served by NVS can be updated for use by the larger oceanographic community
+[[file://inst_vocab_wflow.png]]
+
+* Cruise eventlog post-processing on elog-dev
+1. <cruise-r2r-eventlog> is closed by science party at end of cruise
+2. copy of final <cruise-r2r-eventlog> is copied/staged in elog-dev:/shipdata/<cruiseid> for processing
+3. cruise_archive process is run to accomplish archive-processing
+4. cruise_vocab process is run to accomplish vocabulary processing
+5. cruise_quality process is run to do quality asessment of eventlog
+* cruise_archive process
+1. copy logbooks from cruise to /shipdata/archive/YYYY/elog/logbooks/al/logbook-name
+2. copy most recent elogd.cfg from cruise to /shipdata/archive/YYYY/elog/<cruiseid>-elogd.cfg
+3. build /shipdata/archive/YYYY/elog/elogd.cfg by hand for now (might automate this in the future)
+* cruise_vocab process
+1. copy elogd.cfg for the cruise into /shipdata/vocabmaint/cruises/<cruiseid>/elogd.cfg
+2. run script to extract following files from elogd.cfg into cruise subdir
+   - ecfm_cruisemta.csv
+   - ecfm_instruments.csv
+   - ecfm_actions.csv
+   - ecfm_person.csv
+3. run script to determine if any changes need to be made to vocabulary files in /shipdata/vocabmaint/files, creating
+   - review_instruments <cruiseid>
+   - review_person <cruiseid>
+* Todos
+** TODO consider populating elog-dev:/shipdata/archive/<ship>/<cruiseid> directories w copy of the elogd.cfg that was used during the cruise so they are all in the same place
+** TODO modify 
