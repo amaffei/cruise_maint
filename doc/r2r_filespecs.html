@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="r2r_filespecs"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2014-01-14T07:49-0500"/>
+<meta name="generated" content="2014-01-14T10:50-0500"/>
 <meta name="author" content="Drumbeat"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -131,13 +131,13 @@ for the JavaScript code in this tag.
 <li><a href="#sec-3">3 /shipddata/cruise_maint/bin files</a>
 <ul>
 <li><a href="#sec-3-1">3.1 cruise_toarchive - moves recently completed cruise eventlog to /shipdata/archive</a></li>
-<li><a href="#sec-3-2">3.2 cruise_serve - makes archived cruise eventlog web-accessible on elog-dev.whoi.edu</a></li>
-<li><a href="#sec-3-3">3.3 cruise_vocab - process vocab terms found in archived cruise eventlog</a></li>
-<li><a href="#sec-3-4">3.4 cruise_assess - assess quality of archived cruise eventlog</a></li>
+<li><a href="#sec-3-2">3.2 cruise_webserve - makes archived cruise eventlog web-accessible on elog-dev.whoi.edu</a></li>
+<li><a href="#sec-3-3">3.3 cruise_dovocab - process vocab terms found in archived cruise eventlog</a></li>
+<li><a href="#sec-3-4">3.4 cruise_qassess - assess quality of archived cruise eventlog</a></li>
 <li><a href="#sec-3-5">3.5 vocab_getNVS - put fresh copies of NVS vocabs in /shipdata/cruise_maint/vocabs</a></li>
 <li><a href="#sec-3-6">3.6 vocab_getR2R - put fresh copies of R2R vocabs in /shipdata/cruise_maint/vocabs</a></li>
 <li><a href="#sec-3-7">3.7 vocab_ecfmvoc - create new instruements.csv, actions.csv, etc file in /shipdata/cruise_maint/ecfmvoc</a></li>
-<li><a href="#sec-3-8">3.8 logbook_listattr - given an elog attribute lists values assigned to that attribute during a cruise</a></li>
+<li><a href="#sec-3-8">3.8 logbook_listattr - given an elog attribute lists uniq values assigned to that attribute during a cruise</a></li>
 </ul>
 </li>
 <li><a href="#sec-4">4 /shipdata/cruise_maint/ecfm_voc files</a>
@@ -250,7 +250,7 @@ General naming convention is &lt;thing-acting-on&gt;_&lt;thing-done&gt;.&lt;ext&
 </div>
 
 <div id="outline-container-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="section-number-3">3.2</span> cruise_serve - makes archived cruise eventlog web-accessible on elog-dev.whoi.edu</h3>
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> cruise_webserve - makes archived cruise eventlog web-accessible on elog-dev.whoi.edu</h3>
 <div class="outline-text-3" id="text-3-2">
 
 </div>
@@ -258,7 +258,7 @@ General naming convention is &lt;thing-acting-on&gt;_&lt;thing-done&gt;.&lt;ext&
 </div>
 
 <div id="outline-container-3-3" class="outline-3">
-<h3 id="sec-3-3"><span class="section-number-3">3.3</span> cruise_vocab - process vocab terms found in archived cruise eventlog</h3>
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> cruise_dovocab - process vocab terms found in archived cruise eventlog</h3>
 <div class="outline-text-3" id="text-3-3">
 
 </div>
@@ -266,7 +266,7 @@ General naming convention is &lt;thing-acting-on&gt;_&lt;thing-done&gt;.&lt;ext&
 </div>
 
 <div id="outline-container-3-4" class="outline-3">
-<h3 id="sec-3-4"><span class="section-number-3">3.4</span> cruise_assess - assess quality of archived cruise eventlog</h3>
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> cruise_qassess - assess quality of archived cruise eventlog</h3>
 <div class="outline-text-3" id="text-3-4">
 
 </div>
@@ -298,10 +298,11 @@ General naming convention is &lt;thing-acting-on&gt;_&lt;thing-done&gt;.&lt;ext&
 </div>
 
 <div id="outline-container-3-8" class="outline-3">
-<h3 id="sec-3-8"><span class="section-number-3">3.8</span> logbook_listattr - given an elog attribute lists values assigned to that attribute during a cruise</h3>
+<h3 id="sec-3-8"><span class="section-number-3">3.8</span> logbook_listattr - given an elog attribute lists uniq values assigned to that attribute during a cruise</h3>
 <div class="outline-text-3" id="text-3-8">
 
-</div>
+<p>might want to include an option to list all instances of a specific attribute, we'll see
+</p></div>
 </div>
 
 </div>
@@ -598,7 +599,8 @@ Column Descriptions:
 <h3 id="sec-4-8"><span class="section-number-3">4.8</span> termlist_actions.csv - terms to be included in actions.csv</h3>
 <div class="outline-text-3" id="text-4-8">
 
-</div>
+<p>maintained manually
+</p></div>
 
 </div>
 
@@ -606,7 +608,8 @@ Column Descriptions:
 <h3 id="sec-4-9"><span class="section-number-3">4.9</span> termlist_instruments.csv - terms to be included in instruments.csv</h3>
 <div class="outline-text-3" id="text-4-9">
 
-</div>
+<p>maintained manually
+</p></div>
 </div>
 
 </div>
@@ -805,7 +808,7 @@ Column Descriptions:
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2014-01-14T07:49-0500</p>
+<p class="date">Date: 2014-01-14T10:50-0500</p>
 <p class="author">Author: Drumbeat</p>
 <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

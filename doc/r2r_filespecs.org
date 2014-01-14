@@ -22,13 +22,14 @@ Column Descriptions:
 This is a description of the scripts found in the /shipdata/cruise_maint/bin directory.
 General naming convention is <thing-acting-on>_<thing-done>.<ext>
 ** cruise_toarchive - moves recently completed cruise eventlog to /shipdata/archive
-** cruise_serve - makes archived cruise eventlog web-accessible on elog-dev.whoi.edu
-** cruise_vocab - process vocab terms found in archived cruise eventlog
-** cruise_assess - assess quality of archived cruise eventlog
+** cruise_webserve - makes archived cruise eventlog web-accessible on elog-dev.whoi.edu
+** cruise_dovocab - process vocab terms found in archived cruise eventlog
+** cruise_qassess - assess quality of archived cruise eventlog
 ** vocab_getNVS - put fresh copies of NVS vocabs in /shipdata/cruise_maint/vocabs
 ** vocab_getR2R - put fresh copies of R2R vocabs in /shipdata/cruise_maint/vocabs
 ** vocab_ecfmvoc - create new instruements.csv, actions.csv, etc file in /shipdata/cruise_maint/ecfmvoc
-** logbook_listattr - given an elog attribute lists values assigned to that attribute during a cruise
+** logbook_listattr - given an elog attribute lists uniq values assigned to that attribute during a cruise
+might want to include an option to list all instances of a specific attribute, we'll see
 * /shipdata/cruise_maint/ecfm_voc files
 ** actions.csv - actions used in ECFM configs
 Currently used to fillin the Action attribute in cruise logs
@@ -160,7 +161,9 @@ Column Descriptions:
 - Active
               
 ** termlist_actions.csv - terms to be included in actions.csv
+maintained manually
 ** termlist_instruments.csv - terms to be included in instruments.csv
+maintained manually
 * /shipdata/cruise_maint/vocabs files 
 These are R2R and NVS vocabulary terms in CSV format
 Maintained by routiines vocab_nvs_get and vocab_r2r_get
