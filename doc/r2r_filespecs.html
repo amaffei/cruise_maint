@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
 <meta name="title" content="r2r_filespecs"/>
 <meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2014-01-14T07:33-0500"/>
+<meta name="generated" content="2014-01-14T07:49-0500"/>
 <meta name="author" content="Drumbeat"/>
 <meta name="description" content=""/>
 <meta name="keywords" content=""/>
@@ -123,12 +123,12 @@ for the JavaScript code in this tag.
 <div id="text-table-of-contents">
 <ul>
 <li><a href="#sec-1">1 Introduction</a></li>
-<li><a href="#sec-2">2 /shipdata/cruise_maint</a>
+<li><a href="#sec-2">2 /shipdata/cruise_maint files</a>
 <ul>
 <li><a href="#sec-2-1">2.1 logbooks.csv - List of logbooks served by elog-dev server</a></li>
 </ul>
 </li>
-<li><a href="#sec-3">3 /shipddata/cruise_maint/bin</a>
+<li><a href="#sec-3">3 /shipddata/cruise_maint/bin files</a>
 <ul>
 <li><a href="#sec-3-1">3.1 cruise_toarchive - moves recently completed cruise eventlog to /shipdata/archive</a></li>
 <li><a href="#sec-3-2">3.2 cruise_serve - makes archived cruise eventlog web-accessible on elog-dev.whoi.edu</a></li>
@@ -140,7 +140,7 @@ for the JavaScript code in this tag.
 <li><a href="#sec-3-8">3.8 logbook_listattr - given an elog attribute lists values assigned to that attribute during a cruise</a></li>
 </ul>
 </li>
-<li><a href="#sec-4">4 /shipdata/cruise_maint/ecfm_voc</a>
+<li><a href="#sec-4">4 /shipdata/cruise_maint/ecfm_voc files</a>
 <ul>
 <li><a href="#sec-4-1">4.1 actions.csv - actions used in ECFM configs</a></li>
 <li><a href="#sec-4-2">4.2 activitytype.tsv - obsolete or still used?</a></li>
@@ -153,7 +153,7 @@ for the JavaScript code in this tag.
 <li><a href="#sec-4-9">4.9 termlist_instruments.csv - terms to be included in instruments.csv</a></li>
 </ul>
 </li>
-<li><a href="#sec-5">5 /shipdata/cruise_maint/vocabs</a>
+<li><a href="#sec-5">5 /shipdata/cruise_maint/vocabs files</a>
 <ul>
 <li><a href="#sec-5-1">5.1 nvs_inst_vocab.csv - NVS-defined instrument terms curr used in ECFM</a></li>
 <li><a href="#sec-5-2">5.2 nvs_action_vocab.csv - NVS-defined action terms curr used in ECFM (does not exist yet)</a></li>
@@ -162,26 +162,15 @@ for the JavaScript code in this tag.
 <li><a href="#sec-5-5">5.5 r2r_person_vocab.csv - R2R-defined people terms used in ECFM</a></li>
 </ul>
 </li>
-<li><a href="#sec-6">6 Vocabulary term candidate files</a>
+<li><a href="#sec-6">6 /shipdata/cruise_maint/cruises/&lt;cruiseid&gt; files</a>
 <ul>
-<li><a href="#sec-6-1">6.1 nvs_inst_candidates.csv</a></li>
-<li><a href="#sec-6-2">6.2 nvs_action_candidates.csv</a></li>
-<li><a href="#sec-6-3">6.3 r2r_inst_candidates.csv</a></li>
-<li><a href="#sec-6-4">6.4 r2r_action_candidates.csv</a></li>
-<li><a href="#sec-6-5">6.5 r2r_person_candidates.csv</a></li>
-<li><a href="#sec-6-6">6.6 r2r_organization_candidates.csv</a></li>
-<li><a href="#sec-6-7">6.7 r2r_instactionmap_candidates.csv</a></li>
-</ul>
-</li>
-<li><a href="#sec-7">7 /shipdata/cruise_maint/cruises/&lt;cruiseid&gt;</a>
-<ul>
-<li><a href="#sec-7-1">7.1 elogd.cfg - latest cruise elogd.cfg</a></li>
-<li><a href="#sec-7-2">7.2 ecfm_cruisemeta.csv - cruise metadata from elogd.cfg</a></li>
-<li><a href="#sec-7-3">7.3 ecfm_instruments.csv - instruments from elogd.cfg</a></li>
-<li><a href="#sec-7-4">7.4 ecfm_actions.csv - actions from elogd.cfg</a></li>
-<li><a href="#sec-7-5">7.5 ecfm_person.csv - persons from elogd.cfg</a></li>
-<li><a href="#sec-7-6">7.6 novoc_actions.csv - actions not in NVS or R2R vocabs</a></li>
-<li><a href="#sec-7-7">7.7 novoc_instruments.csv - instruments in NVS or R2R vocabs</a></li>
+<li><a href="#sec-6-1">6.1 elogd.cfg - latest cruise elogd.cfg</a></li>
+<li><a href="#sec-6-2">6.2 ecfm_cruisemeta.csv - cruise metadata from elogd.cfg</a></li>
+<li><a href="#sec-6-3">6.3 ecfm_instruments.csv - instruments from elogd.cfg</a></li>
+<li><a href="#sec-6-4">6.4 ecfm_actions.csv - actions from elogd.cfg</a></li>
+<li><a href="#sec-6-5">6.5 ecfm_person.csv - persons from elogd.cfg</a></li>
+<li><a href="#sec-6-6">6.6 novoc_actions.csv - actions not in NVS or R2R vocabs</a></li>
+<li><a href="#sec-6-7">6.7 novoc_instruments.csv - instruments in NVS or R2R vocabs</a></li>
 </ul>
 </li>
 </ul>
@@ -198,7 +187,7 @@ for the JavaScript code in this tag.
 </div>
 
 <div id="outline-container-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> /shipdata/cruise_maint</h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> /shipdata/cruise_maint files</h2>
 <div class="outline-text-2" id="text-2">
 
 
@@ -244,7 +233,7 @@ Column Descriptions:
 </div>
 
 <div id="outline-container-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> /shipddata/cruise_maint/bin</h2>
+<h2 id="sec-3"><span class="section-number-2">3</span> /shipddata/cruise_maint/bin files</h2>
 <div class="outline-text-2" id="text-3">
 
 <p>This is a description of the scripts found in the /shipdata/cruise_maint/bin directory.
@@ -318,7 +307,7 @@ General naming convention is &lt;thing-acting-on&gt;_&lt;thing-done&gt;.&lt;ext&
 </div>
 
 <div id="outline-container-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> /shipdata/cruise_maint/ecfm_voc</h2>
+<h2 id="sec-4"><span class="section-number-2">4</span> /shipdata/cruise_maint/ecfm_voc files</h2>
 <div class="outline-text-2" id="text-4">
 
 
@@ -623,7 +612,7 @@ Column Descriptions:
 </div>
 
 <div id="outline-container-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> /shipdata/cruise_maint/vocabs</h2>
+<h2 id="sec-5"><span class="section-number-2">5</span> /shipdata/cruise_maint/vocabs files</h2>
 <div class="outline-text-2" id="text-5">
 
 <p>These are R2R and NVS vocabulary terms in CSV format
@@ -673,93 +662,25 @@ Maintained by routiines vocab_nvs_get and vocab_r2r_get
 </div>
 
 <div id="outline-container-6" class="outline-2">
-<h2 id="sec-6"><span class="section-number-2">6</span> Vocabulary term candidate files</h2>
+<h2 id="sec-6"><span class="section-number-2">6</span> /shipdata/cruise_maint/cruises/&lt;cruiseid&gt; files</h2>
 <div class="outline-text-2" id="text-6">
-
-<p>Entries in R2R logbooks not yet entered into NVS or R2R vocabularies
-</p>
-</div>
-
-<div id="outline-container-6-1" class="outline-3">
-<h3 id="sec-6-1"><span class="section-number-3">6.1</span> nvs_inst_candidates.csv</h3>
-<div class="outline-text-3" id="text-6-1">
-
-<p>Same format as instruments.csv
-</p></div>
-
-</div>
-
-<div id="outline-container-6-2" class="outline-3">
-<h3 id="sec-6-2"><span class="section-number-3">6.2</span> nvs_action_candidates.csv</h3>
-<div class="outline-text-3" id="text-6-2">
-
-<p>Same format as actions.csv
-</p></div>
-
-</div>
-
-<div id="outline-container-6-3" class="outline-3">
-<h3 id="sec-6-3"><span class="section-number-3">6.3</span> r2r_inst_candidates.csv</h3>
-<div class="outline-text-3" id="text-6-3">
-
-<p>Same format as instruments.csv
-</p></div>
-
-</div>
-
-<div id="outline-container-6-4" class="outline-3">
-<h3 id="sec-6-4"><span class="section-number-3">6.4</span> r2r_action_candidates.csv</h3>
-<div class="outline-text-3" id="text-6-4">
-
-</div>
-
-</div>
-
-<div id="outline-container-6-5" class="outline-3">
-<h3 id="sec-6-5"><span class="section-number-3">6.5</span> r2r_person_candidates.csv</h3>
-<div class="outline-text-3" id="text-6-5">
-
-</div>
-
-</div>
-
-<div id="outline-container-6-6" class="outline-3">
-<h3 id="sec-6-6"><span class="section-number-3">6.6</span> r2r_organization_candidates.csv</h3>
-<div class="outline-text-3" id="text-6-6">
-
-</div>
-
-</div>
-
-<div id="outline-container-6-7" class="outline-3">
-<h3 id="sec-6-7"><span class="section-number-3">6.7</span> r2r_instactionmap_candidates.csv</h3>
-<div class="outline-text-3" id="text-6-7">
-
-</div>
-</div>
-
-</div>
-
-<div id="outline-container-7" class="outline-2">
-<h2 id="sec-7"><span class="section-number-2">7</span> /shipdata/cruise_maint/cruises/&lt;cruiseid&gt;</h2>
-<div class="outline-text-2" id="text-7">
 
 <p>Files found in cruises/&lt;cruiseid&gt; subdirectory
 </p>
 </div>
 
-<div id="outline-container-7-1" class="outline-3">
-<h3 id="sec-7-1"><span class="section-number-3">7.1</span> elogd.cfg - latest cruise elogd.cfg</h3>
-<div class="outline-text-3" id="text-7-1">
+<div id="outline-container-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> elogd.cfg - latest cruise elogd.cfg</h3>
+<div class="outline-text-3" id="text-6-1">
 
 <p>Copied from cruise distribution, in elog.cfg format
 </p></div>
 
 </div>
 
-<div id="outline-container-7-2" class="outline-3">
-<h3 id="sec-7-2"><span class="section-number-3">7.2</span> ecfm_cruisemeta.csv - cruise metadata from elogd.cfg</h3>
-<div class="outline-text-3" id="text-7-2">
+<div id="outline-container-6-2" class="outline-3">
+<h3 id="sec-6-2"><span class="section-number-3">6.2</span> ecfm_cruisemeta.csv - cruise metadata from elogd.cfg</h3>
+<div class="outline-text-3" id="text-6-2">
 
 <p>Cruise metadata extracted from elogd.cfg
 Created:
@@ -790,9 +711,9 @@ Column Descriptions:
 
 </div>
 
-<div id="outline-container-7-3" class="outline-3">
-<h3 id="sec-7-3"><span class="section-number-3">7.3</span> ecfm_instruments.csv - instruments from elogd.cfg</h3>
-<div class="outline-text-3" id="text-7-3">
+<div id="outline-container-6-3" class="outline-3">
+<h3 id="sec-6-3"><span class="section-number-3">6.3</span> ecfm_instruments.csv - instruments from elogd.cfg</h3>
+<div class="outline-text-3" id="text-6-3">
 
 <p>Instruments extracted from elogd.cfg
 Created:
@@ -822,9 +743,9 @@ Column Descriptions:
 
 </div>
 
-<div id="outline-container-7-4" class="outline-3">
-<h3 id="sec-7-4"><span class="section-number-3">7.4</span> ecfm_actions.csv - actions from elogd.cfg</h3>
-<div class="outline-text-3" id="text-7-4">
+<div id="outline-container-6-4" class="outline-3">
+<h3 id="sec-6-4"><span class="section-number-3">6.4</span> ecfm_actions.csv - actions from elogd.cfg</h3>
+<div class="outline-text-3" id="text-6-4">
 
 <p>Actions extracted from elogd.cfg
 Created:
@@ -844,9 +765,9 @@ Column Descriptions:
 
 </div>
 
-<div id="outline-container-7-5" class="outline-3">
-<h3 id="sec-7-5"><span class="section-number-3">7.5</span> ecfm_person.csv - persons from elogd.cfg</h3>
-<div class="outline-text-3" id="text-7-5">
+<div id="outline-container-6-5" class="outline-3">
+<h3 id="sec-6-5"><span class="section-number-3">6.5</span> ecfm_person.csv - persons from elogd.cfg</h3>
+<div class="outline-text-3" id="text-6-5">
 
 <p>Persons extracted from elogd.cfg
 Created:
@@ -866,17 +787,17 @@ Column Descriptions:
 
 </div>
 
-<div id="outline-container-7-6" class="outline-3">
-<h3 id="sec-7-6"><span class="section-number-3">7.6</span> novoc_actions.csv - actions not in NVS or R2R vocabs</h3>
-<div class="outline-text-3" id="text-7-6">
+<div id="outline-container-6-6" class="outline-3">
+<h3 id="sec-6-6"><span class="section-number-3">6.6</span> novoc_actions.csv - actions not in NVS or R2R vocabs</h3>
+<div class="outline-text-3" id="text-6-6">
 
 </div>
 
 </div>
 
-<div id="outline-container-7-7" class="outline-3">
-<h3 id="sec-7-7"><span class="section-number-3">7.7</span> novoc_instruments.csv - instruments in NVS or R2R vocabs</h3>
-<div class="outline-text-3" id="text-7-7">
+<div id="outline-container-6-7" class="outline-3">
+<h3 id="sec-6-7"><span class="section-number-3">6.7</span> novoc_instruments.csv - instruments in NVS or R2R vocabs</h3>
+<div class="outline-text-3" id="text-6-7">
 
 </div>
 </div>
@@ -884,7 +805,7 @@ Column Descriptions:
 </div>
 
 <div id="postamble">
-<p class="date">Date: 2014-01-14T07:33-0500</p>
+<p class="date">Date: 2014-01-14T07:49-0500</p>
 <p class="author">Author: Drumbeat</p>
 <p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
 <a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>

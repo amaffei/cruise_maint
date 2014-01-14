@@ -1,6 +1,6 @@
 * Introduction
 This file provides descriptions of vocabluary and application files used by ECFM
-* /shipdata/cruise_maint
+* /shipdata/cruise_maint files
 ** logbooks.csv - List of logbooks served by elog-dev server
 Created:'maintained by hand
 Sample Records:
@@ -18,7 +18,7 @@ Column Descriptions:
 - *ConfigFile* - Last version of the configfile (elogd.cfg) that was used for logbook creation          
 - *LogbookDir* - Directory on elog-dev that the .log (and associated) files for this logbook are stored 
 
-* /shipddata/cruise_maint/bin
+* /shipddata/cruise_maint/bin files
 This is a description of the scripts found in the /shipdata/cruise_maint/bin directory.
 General naming convention is <thing-acting-on>_<thing-done>.<ext>
 ** cruise_toarchive - moves recently completed cruise eventlog to /shipdata/archive
@@ -29,7 +29,7 @@ General naming convention is <thing-acting-on>_<thing-done>.<ext>
 ** vocab_getR2R - put fresh copies of R2R vocabs in /shipdata/cruise_maint/vocabs
 ** vocab_ecfmvoc - create new instruements.csv, actions.csv, etc file in /shipdata/cruise_maint/ecfmvoc
 ** logbook_listattr - given an elog attribute lists values assigned to that attribute during a cruise
-* /shipdata/cruise_maint/ecfm_voc
+* /shipdata/cruise_maint/ecfm_voc files
 ** actions.csv - actions used in ECFM configs
 Currently used to fillin the Action attribute in cruise logs
 Created: *cat r2r_action_vocab.csv > actions.csv*
@@ -161,7 +161,7 @@ Column Descriptions:
               
 ** termlist_actions.csv - terms to be included in actions.csv
 ** termlist_instruments.csv - terms to be included in instruments.csv
-* /shipdata/cruise_maint/vocabs
+* /shipdata/cruise_maint/vocabs files 
 These are R2R and NVS vocabulary terms in CSV format
 Maintained by routiines vocab_nvs_get and vocab_r2r_get
 ** nvs_inst_vocab.csv - NVS-defined instrument terms curr used in ECFM
@@ -169,19 +169,7 @@ Maintained by routiines vocab_nvs_get and vocab_r2r_get
 ** r2r_inst_vocab.csv - R2R-defined instrument terms curr used in ECFM
 ** r2r_action_vocab.csv - R2R-defined action terms used in ECFM
 ** r2r_person_vocab.csv - R2R-defined people terms used in ECFM
-* Vocabulary term candidate files 
-Entries in R2R logbooks not yet entered into NVS or R2R vocabularies
-** nvs_inst_candidates.csv
-Same format as instruments.csv
-** nvs_action_candidates.csv
-Same format as actions.csv
-** r2r_inst_candidates.csv
-Same format as instruments.csv
-** r2r_action_candidates.csv
-** r2r_person_candidates.csv
-** r2r_organization_candidates.csv
-** r2r_instactionmap_candidates.csv
-* /shipdata/cruise_maint/cruises/<cruiseid>
+* /shipdata/cruise_maint/cruises/<cruiseid> files
 Files found in cruises/<cruiseid> subdirectory
 ** elogd.cfg - latest cruise elogd.cfg
 Copied from cruise distribution, in elog.cfg format
