@@ -1,0 +1,121 @@
+* Purpose
+Need to immediately create new vocabs for a pending Pelican distribution
+* Problems from sikuliaq
+* 
+elog-dev:/home/r2root/current/CRUISE.TEMPLATE/r2r/info/vessels/sq_instruments.csv
+
+|-----------------------+--------------+----------------------------------------|
+| DefaultInstrumentTerm | DeviceID     | DeviceTerm                             |
+|-----------------------+--------------+----------------------------------------|
+| CTD911                | L22/TOOL0058 | Sea-Bird SBE 911plus CTD               |
+| Other                 | R2RE/1024    | Instrument Details Specified Elsewhere |
+| Ship                  | R2RE/1027    | Academic Research Vessel               |
+|-----------------------+--------------+----------------------------------------|
+
+r2root@r2rqq09:~/current/CRUISE.TEMPLATE/r2r/info/vessels/sq_instruments.csv
+
+|-----------------------+--------------+--------------------------------------------------------+---------+-----------------------|
+| DefaultInstrumentTerm | DeviceID     | DeviceTerm                                             |         |                       |
+|-----------------------+--------------+--------------------------------------------------------+---------+-----------------------|
+| Ship                  | R2RE/1027    | Academic Research Vessel                               |         |                       |
+| CTD911                | L22/TOOL0058 | Sea-Bird SBE 911plus CTD                               |         |                       |
+| EM302                 | R2RE/1029    | Kongsberg EM 302 multibeam echosounder                 |         |                       |
+| EM710                 | R2RE/9091    | Kongsberg EM EM710 multibeam echosounder               |         |                       |
+| PS18                  | R2RE/9092    | Kongsberg Topas PS18                                   |         |                       |
+| OS150                 | R2RE/9093    | Teledyne RDI Ocean Surveyor 150kHz vessel-mounted ADCP |         |                       |
+| OS75                  | L22/TOOL0362 | Teledyne RDI Ocean Surveyor 75kHz vessel-mounted ADCP  |         |                       |
+| Echosounder12         | R2RE/9038    | generic 12kHz echosounder                              |         |                       |
+| EK60                  | R2RE/9094    | Simrad Split beam EK60                                 |         |                       |
+| centerBoard           | R2RE/9095    | Acoustic Centerboard                                   |         |                       |
+| hydrophoneArray       | R2RE/9096    | Soundguard Hydrophone Array                            |         |                       |
+| Gravimeter            | R2RE/9041    | Bell Aerospace BGM-3 gravity meter                     |         |                       |
+| XBT                   | R2RE/1031    | Generic XBT                                            | L05/132 | bathythermographs     |
+| PCO2                  | R2RE/9027    | PCO2 r2r_devtype                                       | L05/351 | dissolved gas sensors |
+| LDS                   | R2RE/9097    | LDS Logger                                             |         |                       |
+| CNAV                  | R2RE/9098    | CNAV GPS                                               |         |                       |
+| seapath               | R2RE/9099    | Seapath 320                                            |         |                       |
+| MOCNESS1              | R2RE/1017    | MOCNESS1                                               |         |                       |
+| Multicorer            | R2RE/9100    | MC800 multicorer                                       |         |                       |
+| winchCTD              | R2RE/9101    | CTD  Hydrographic Winch                                |         |                       |
+| winchHydro            | R2RE/9102    | Hydrographic Winch                                     |         |                       |
+| winchTrawl 680        | R2RE/9103    | Trawl Winch with 680 cable                             |         |                       |
+| winchTrawl 9/16       | R2RE/9104    | Trawl Winch with 9/16 cable                            |         |                       |
+|-----------------------+--------------+--------------------------------------------------------+---------+-----------------------|
+
+r2root@elog-dev:~/current/CRUISE.TEMPLATE/r2r/info/voc/instactionmap.csv
+
+| EventTerm               | DefaultActionTerms                                                                                                                                                                                                                                                         |
+| ALL                     | deploy;recover;service;other;startSample;stopSample; maxDepth;abort;startLine;endLine;abortLine;start;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release |
+| ADCP75                  | start;stop;service;other                                                                                                                                                                                                                                                   |
+| ADCP150                 | start;stop;service;other                                                                                                                                                                                                                                                   |
+| ADCP300                 | start;stop;service;other                                                                                                                                                                                                                                                   |
+| biologyPump             | startSample;stopSample                                                                                                                                                                                                                                                     |
+| CTD911                  | deploy;maxDepth;recover;abort;other                                                                                                                                                                                                                                        |
+| Echosounder12           | startLine;endLine;abortLine                                                                                                                                                                                                                                                |
+| Echosounder3.5          | startLine;endLine;abortLine                                                                                                                                                                                                                                                |
+| Fluorometer             | startLine;endLine;abortLine;sampleLine                                                                                                                                                                                                                                     |
+| GreeneBomber            | deploy;recover;abort;other                                                                                                                                                                                                                                                 |
+| Hammerhead              | deploy;recover;abort;other                                                                                                                                                                                                                                                 |
+| Handline                | start;end;other                                                                                                                                                                                                                                                            |
+| mastCamera              | start;end;other                                                                                                                                                                                                                                                            |
+| MeterologicalSensor     | startLine;endLine;abortLine;sampleLine                                                                                                                                                                                                                                     |
+| MOCNESS1                | deploy;maxDepth;recover;abort;other                                                                                                                                                                                                                                        |
+| MOCNESS10               | deploy;maxDepth;recover;abort;other                                                                                                                                                                                                                                        |
+| Mooring                 | deploy;service;recover;startLine;endLine;abortLine;other                                                                                                                                                                                                                   |
+| Navigation              | faultGPS;faultGyro                                                                                                                                                                                                                                                         |
+| ObserverBirds           | start;end;other                                                                                                                                                                                                                                                            |
+| ObserverMammals         | start;end;other                                                                                                                                                                                                                                                            |
+| Other                   | start;end                                                                                                                                                                                                                                                                  |
+| REMUS                   | start;end;other                                                                                                                                                                                                                                                            |
+| Ship                    | startCruise;endCruise;other                                                                                                                                                                                                                                                |
+| Thermosalinograph SBE45 | startLine;endLine;abortLine;sampleLine                                                                                                                                                                                                                                     |
+| VPR                     | deploy;maxDepth;recover;abort;other                                                                                                                                                                                                                                        |
+| Winch                   | maxtensionWire;maxspeedWire                                                                                                                                                                                                                                                |
+| XBT                     | release                                                                                                                                                                                                                                                                    |
+| EM302                   | start;stop;other                                                                                                                                                                                                                                                           |
+
+
+r2root@r2rqq09:~/current/CRUISE.TEMPLATE/r2r/info/voc/instactionmap.csv
+"EventTerm","DefaultActionTerms"
+"ALL","deploy;recover;service;other;startSample;stopSample; maxDepth;abort;startLine;endLine;abortLine;start;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release"
+"ADCP75","start;stop;service;other"
+"ADCP150","start;stop;service;other"
+"ADCP300","start;stop;service;other"
+"biologyPump","startSample;stopSample"
+"CTD911","deploy;maxDepth;recover;abort;other"
+"Echosounder12","startLine;endLine;abortLine"
+"Echosounder3.5","startLine;endLine;abortLine"
+"Fluorometer","startLine;endLine;abortLine;sampleLine"
+"GreeneBomber","deploy;recover;abort;other"
+"Hammerhead","deploy;recover;abort;other"
+"Handline","start;end;other"
+"mastCamera","start;end;other"
+"MeterologicalSensor","startLine;endLine;abortLine;sampleLine"
+"MOCNESS1","deploy;maxDepth;recover;abort;other"
+"MOCNESS10","deploy;maxDepth;recover;abort;other"
+"Mooring","deploy;service;recover;startLine;endLine;abortLine;other"
+"Navigation","faultGPS;faultGyro"
+"ObserverBirds","start;end;other"
+"ObserverMammals","start;end;other"
+"Other","start;end"
+"REMUS","start;end;other"
+"Ship","startCruise;endCruise;other"
+"Thermosalinograph SBE45","startLine;endLine;abortLine;sampleLine"
+"VPR","deploy;maxDepth;recover;abort;other"
+"Winch","maxtensionWire;maxspeedWire"
+"XBT","release"
+"EM302","start;stop;other"
+"EM710","start;stop;other"
+"PS18","start;stop;other"
+"OS150","start;stop;service;other"
+"EK60","start;stop;other"
+"LDS logger","start;stop;other"
+"CNAV","start;stop;other"
+"seapath","start;stop;other"
+"Multicorer","deploy;maxDepth;recover;abort;other"
+"winchCTD","start;stop;other"
+"winchHydro","start;stop;other"
+"winchTrawl 680","start;stop;other"
+"winchTrawl 9/16","start;stop;other"
+
+

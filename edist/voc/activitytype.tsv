@@ -1,0 +1,31 @@
+ActivityType	Description
+abort	device sampling has been aborted
+abortLine	research vessel has aborted a line from one station (waypoint) to another
+arrivePort	research vessel has arrived in port
+calibrate	device has been (re)calibrated
+debarkPerson	person has departed vessel from a cruise (or leg)
+departPort	research vessel has left port
+deploy	device has been deployed from the research vessel
+embarkPerson	person has boarded vessel for a cruise (or leg)
+end	device sampling has ended
+endCruise	research cruise (or cruise leg) has ended
+endLine	research vessel had arrived at the destination station (waypoint)
+endSample	sea sample has been completed
+endTransect	transect has been completed
+fault	fault has occurred on a device
+faultGPS	fault has occured on the GPS
+faultGyro	fault has occurred on the Gyro
+install	device has been installed on the vessel
+maxDepth	device has reached its maximum depth
+maxspeedWire	wire on a winch has reached its maximum speed
+maxtensionWire	wire on a winch has reached maximum tension
+other	other activity for which there is no vocabulary term -- see comments
+recover	device has been recovered from the sea to the research vessel
+remove	device has been removed from the vessel
+sampleLine	sea sample has been taken while the research vessel is proceeding along a line
+service	device has been serviced
+start	device sampling has been started
+startCruise	research cruise (or cruise leg) has started
+startLine	research vessel has started a course from the present station (waypoint) to a destination station (waypoint)
+startSample	sea sample has been started
+startTransect	transect has been started

@@ -28,9 +28,10 @@ General naming convention is <thing-acting-on>_<thing-done>.<ext>
 ** vocab_getNVS - put fresh copies of NVS vocabs in /shipdata/cruise_maint/vocabs
 ** vocab_getR2R - put fresh copies of R2R vocabs in /shipdata/cruise_maint/vocabs
 ** vocab_ecfmvoc - create new instruements.csv, actions.csv, etc file in /shipdata/cruise_maint/ecfmvoc
+** ecfm_makevocs - creates vocabulary files necessary for ecfm application
 ** logbook_listattr - given an elog attribute lists uniq values assigned to that attribute during a cruise
 might want to include an option to list all instances of a specific attribute, we'll see
-* /shipdata/cruise_maint/ecfm_voc files
+* /shipdata/cruise_maint/edist_voc files
 ** actions.csv - actions used in ECFM configs
 Currently used to fillin the Action attribute in cruise logs
 Created: *cat r2r_action_vocab.csv > actions.csv*
@@ -172,11 +173,11 @@ Maintained by routiines vocab_nvs_get and vocab_r2r_get
 ** r2r_inst_vocab.csv - R2R-defined instrument terms curr used in ECFM
 ** r2r_action_vocab.csv - R2R-defined action terms used in ECFM
 ** r2r_person_vocab.csv - R2R-defined people terms used in ECFM
-* /shipdata/cruise_maint/cruises/<cruiseid> files
+* /shipdata/cruise_maint/cruises files
 Files found in cruises/<cruiseid> subdirectory
-** elogd.cfg - latest cruise elogd.cfg
+** <cruiseid>/elogd.cfg - latest cruise elogd.cfg
 Copied from cruise distribution, in elog.cfg format
-** ecfm_cruisemeta.csv - cruise metadata from elogd.cfg
+** <cruiseid>/ecfm_cruisemeta.csv - cruise metadata from elogd.cfg
 Cruise metadata extracted from elogd.cfg
 Created:
 Sample Records:
@@ -191,7 +192,7 @@ Column Descriptions:
 | Header         | Description |
 |----------------+-------------|
 |----------------+-------------|
-** ecfm_instruments.csv - instruments from elogd.cfg
+** <cruiseid>/ecfm_instruments.csv - instruments from elogd.cfg
 Instruments extracted from elogd.cfg
 Created:
 Sample Records:
@@ -206,7 +207,7 @@ Column Descriptions:
 | Header         | Description |
 |----------------+-------------|
 |----------------+-------------|
-** ecfm_actions.csv - actions from elogd.cfg
+** <cruiseid>/ecfm_actions.csv - actions from elogd.cfg
 Actions extracted from elogd.cfg
 Created:
 Sample Records:
@@ -216,7 +217,7 @@ Column Descriptions:
 | Header         | Description |
 |----------------+-------------|
 |----------------+-------------|
-** ecfm_person.csv - persons from elogd.cfg
+** <cruiseid>/ecfm_person.csv - persons from elogd.cfg
 Persons extracted from elogd.cfg
 Created:
 Sample Records:
@@ -226,5 +227,6 @@ Column Descriptions:
 | Header         | Description |
 |----------------+-------------|
 |----------------+-------------|
-** novoc_actions.csv - actions not in NVS or R2R vocabs
-** novoc_instruments.csv - instruments in NVS or R2R vocabs
+** <cruiseid>/novoc_actions.csv - actions not in NVS or R2R vocabs
+** <cruiseid>/novoc_instruments.csv - instruments in NVS or R2R vocabs
+* /shipdata/cruise_maint/vessels
