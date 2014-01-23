@@ -1,3 +1,4 @@
 *~
-tmp/*
+bin/tmp/*
+edist_cft/tmp/*
 #cruises/*
