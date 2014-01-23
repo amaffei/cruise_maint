@@ -1,7 +1,28 @@
 * Introduction
 This file provides descriptions of vocabluary and application files used by ECFM
-* /shipdata/cruise_maint files
-** logbooks.csv - List of logbooks served by elog-dev server
+* /shipdata/cruise_maint
+** README.md
+** bin/ - script directory
+This is a description of the scripts found in the /shipdata/cruise_maint/bin directory.
+General naming convention is <thing-acting-on>_<thing-done>.<ext>
+*** cruise_toarchive - moves recently completed cruise eventlog to /shipdata/archive
+*** cruise_webserve - makes archived cruise eventlog web-accessible on elog-dev.whoi.edu
+*** cruise_dovocab - process vocab terms found in archived cruise eventlog
+*** cruise_extractTermfiles - extract metadata, instrument, and person records from cruise elogd.cfg
+*** cruise_addTerms - add metadata, instrument, and person terms in cruise level CSVs
+*** cruise_qassess - assess quality of archived cruise eventlog
+*** vocab_getNVS - put fresh copies of NVS vocabs in /shipdata/cruise_maint/vocabs
+*** vocab_getR2R - put fresh copies of R2R vocabs in /shipdata/cruise_maint/vocabs
+*** vocab_r2r2nvs - r2re terms to be submitted to NVS for consideration
+*** vocab_cruise2r2r - make list of terms to be added to r2re vocab
+*** edist_makevocs - creates files for edist info/voc directory
+*** edist_makevessels - creates files for edist info/vessels directory
+*** edist_make_instruments - make instrument.csv from masterlist
+*** edist_make_instaction - make instactions.csv from masterlist
+*** logbook_listattr - given an elog attribute lists uniq values assigned to that attribute during a cruise
+might want to include an option to list all instances of a specific attribute, we'll see
+** cruises/ - configs, logbooks, etc. from cruises
+*** 00cruiselist.csv - info about cruises
 Created:'maintained by hand
 Sample Records:
 |-------------+------------+-----------------------------------------------+----------------------------------------------------|
@@ -17,22 +38,70 @@ Column Descriptions:
 - *CruiseYear* - Year the cruise associated with the logbook took place in                              
 - *ConfigFile* - Last version of the configfile (elogd.cfg) that was used for logbook creation          
 - *LogbookDir* - Directory on elog-dev that the .log (and associated) files for this logbook are stored 
+*** <cruiseid>/ - subdirectory for a cruise
+**** elogd.cfg - latest cruise elogd.cfg
+Copied from cruise distribution, in elog.cfg format
+**** ecfm_cruisemeta.csv - cruise metadata from elogd.cfg
+Cruise metadata extracted from elogd.cfg
+Created:
+Sample Records:
+|----------+----------------+-------+------+------+-----+-------+-------+------|
+| cruiseid | ship           | three | four | five | six | seven | eight | nine |
+|----------+----------------+-------+------+------+-----+-------+-------+------|
+| al130801 | R/V M/Y Alucia |       |      |      |     |       |       |      |
+|----------+----------------+-------+------+------+-----+-------+-------+------|
 
-* /shipddata/cruise_maint/bin files
-This is a description of the scripts found in the /shipdata/cruise_maint/bin directory.
-General naming convention is <thing-acting-on>_<thing-done>.<ext>
-** cruise_toarchive - moves recently completed cruise eventlog to /shipdata/archive
-** cruise_webserve - makes archived cruise eventlog web-accessible on elog-dev.whoi.edu
-** cruise_dovocab - process vocab terms found in archived cruise eventlog
-** cruise_qassess - assess quality of archived cruise eventlog
-** vocab_getNVS - put fresh copies of NVS vocabs in /shipdata/cruise_maint/vocabs
-** vocab_getR2R - put fresh copies of R2R vocabs in /shipdata/cruise_maint/vocabs
-** vocab_ecfmvoc - create new instruements.csv, actions.csv, etc file in /shipdata/cruise_maint/ecfmvoc
-** ecfm_makevocs - creates vocabulary files necessary for ecfm application
-** logbook_listattr - given an elog attribute lists uniq values assigned to that attribute during a cruise
-might want to include an option to list all instances of a specific attribute, we'll see
-* /shipdata/cruise_maint/edist_voc files
-** actions.csv - actions used in ECFM configs
+Column Descriptions:
+|----------------+-------------|
+| Header         | Description |
+|----------------+-------------|
+|----------------+-------------|
+**** ecfm_instruments.csv - instruments from elogd.cfg
+Instruments extracted from elogd.cfg
+Created:
+Sample Records:
+|-----------+--------------------------+-------------+-----------------+-----------------------+------------------------------------------------+--------------+---------------------------------------+-------|
+| DeviceID  | DeviceTerm               | DeviceCatID | DeviceCatTerm   | DefaultInstrumentTerm | DeviceDescription                              | AttrNameUsed | ActionsUsed                           | State |
+|-----------+--------------------------+-------------+-----------------+-----------------------+------------------------------------------------+--------------+---------------------------------------+-------|
+| R2RE/1027 | Academic Research Vessel | R2RE/1006   | research vessel | Ship                  | Academic Research Vessel description goes here | Ship         | startCruise;endCruise;other           |     0 |
+| R2RE/1057 | F185_MRU                 | R2RE/1010   | user specified  | UserSpecified         | Coda Octopus F185+ Motion Reference Unit       | F185         | startCalibration;endCalibration;other |     3 |
+|-----------+--------------------------+-------------+-----------------+-----------------------+------------------------------------------------+--------------+---------------------------------------+-------|
+Column Descriptions:
+|----------------+-------------|
+| Header         | Description |
+|----------------+-------------|
+|----------------+-------------|
+**** ecfm_actions.csv - actions from elogd.cfg
+Actions extracted from elogd.cfg
+Created:
+Sample Records:
+
+Column Descriptions:
+|----------------+-------------|
+| Header         | Description |
+|----------------+-------------|
+|----------------+-------------|
+**** ecfm_person.csv - persons from elogd.cfg
+Persons extracted from elogd.cfg
+Created:
+Sample Records:
+
+Column Descriptions:
+|----------------+-------------|
+| Header         | Description |
+|----------------+-------------|
+|----------------+-------------|
+**** novoc_actions.csv - actions not in NVS or R2R vocabs
+**** novoc_instruments.csv - instruments in NVS or R2R vocabs
+** doc/ - documentation
+*** r2r_cruisemaint.org - other documentation
+*** r2r_filespecs.org - this file
+** edist/ - files related to edist application
+*** instruments_master.csv - master list of instrument info for edist
+*** vessels/ - subdir for vessel instrument csvs to be included in edist
+**** <vessel_prefix>_instruments.csv
+*** voc/ - subdir for vocabs to be included in edist
+**** actions.csv - actions used in ECFM configs
 Currently used to fillin the Action attribute in cruise logs
 Created: *cat r2r_action_vocab.csv > actions.csv*
 Sample Records:
@@ -48,7 +117,7 @@ Column Descriptions:
 - ActionID                              
 - ActionDescription                     
 
-** activitytype.tsv - obsolete or still used?
+**** activitytype.tsv - obsolete or still used?
 Obsolete? Not sure where this file came from
 Created: *Obsolete?*
 Sample Records:
@@ -65,7 +134,7 @@ Column Descriptions:
 - ActivityType
 - Description
 
-** instactionmap.csv - what actions can instruments perform?
+**** instactionmap.csv - what actions can instruments perform?
 Created:
 Sample Records:
 |-------------+--------------------------|
@@ -81,7 +150,7 @@ Column Descriptions:
 - EventTerm                       
 - DefaultActionTerms              
 
-** instruments.csv - instruments used in ECFM configs
+**** instruments.csv - instruments used in ECFM configs
 Created:
 Sample Records:
 |-----------+--------------------------+-------------+-------------------------+-----------------------+------------------------------------------+---------------|
@@ -102,7 +171,7 @@ Column Descriptions:
 - DeviceDescription
 - Notes
 
-** organization.tsv - organizations used in ECFM configs
+**** organization.tsv - organizations used in ECFM configs
 Created: Copied from rvdata.us webservice
 Sample Records:
 |------------------+------------------------------+----------+-----------|
@@ -120,7 +189,7 @@ Column Descriptions:
 - Acronym                     
 - CountryID                   
 
-** person.tsv - participants list used in ECFM configs
+**** person.tsv - participants list used in ECFM configs
 Created: Copied from rvdata.us webservice
 Sample Records:
 |----------+--------------------+------------+---------------|
@@ -137,7 +206,7 @@ Column Descriptions:
 - ShortName                  
 - InstitutionID              
 
-** vessel.tsv - vessels used in ECFM configs
+**** vessel.tsv - vessels used in ECFM configs
 Created: Copied from rvdata.us webservice
 Sample Records:
 |--------+-------------------+----------+--------------+----------+------------+-----------+---------------+-------------+-------------+--------|
@@ -161,72 +230,16 @@ Column Descriptions:
 - Designation              
 - Active
               
-** termlist_actions.csv - terms to be included in actions.csv
-maintained manually
-** termlist_instruments.csv - terms to be included in instruments.csv
-maintained manually
-* /shipdata/cruise_maint/vocabs files 
-These are R2R and NVS vocabulary terms in CSV format
-Maintained by routiines vocab_nvs_get and vocab_r2r_get
-** nvs_inst_vocab.csv - NVS-defined instrument terms curr used in ECFM
-** nvs_action_vocab.csv - NVS-defined action terms curr used in ECFM (does not exist yet)
-** r2r_inst_vocab.csv - R2R-defined instrument terms curr used in ECFM
-** r2r_action_vocab.csv - R2R-defined action terms used in ECFM
-** r2r_person_vocab.csv - R2R-defined people terms used in ECFM
-* /shipdata/cruise_maint/cruises files
-Files found in cruises/<cruiseid> subdirectory
-** <cruiseid>/elogd.cfg - latest cruise elogd.cfg
-Copied from cruise distribution, in elog.cfg format
-** <cruiseid>/ecfm_cruisemeta.csv - cruise metadata from elogd.cfg
-Cruise metadata extracted from elogd.cfg
-Created:
-Sample Records:
-|----------+----------------+-------+------+------+-----+-------+-------+------|
-| cruiseid | ship           | three | four | five | six | seven | eight | nine |
-|----------+----------------+-------+------+------+-----+-------+-------+------|
-| al130801 | R/V M/Y Alucia |       |      |      |     |       |       |      |
-|----------+----------------+-------+------+------+-----+-------+-------+------|
-
-Column Descriptions:
-|----------------+-------------|
-| Header         | Description |
-|----------------+-------------|
-|----------------+-------------|
-** <cruiseid>/ecfm_instruments.csv - instruments from elogd.cfg
-Instruments extracted from elogd.cfg
-Created:
-Sample Records:
-|-----------+--------------------------+-------------+-----------------+-----------------------+------------------------------------------------+--------------+---------------------------------------+-------|
-| DeviceID  | DeviceTerm               | DeviceCatID | DeviceCatTerm   | DefaultInstrumentTerm | DeviceDescription                              | AttrNameUsed | ActionsUsed                           | State |
-|-----------+--------------------------+-------------+-----------------+-----------------------+------------------------------------------------+--------------+---------------------------------------+-------|
-| R2RE/1027 | Academic Research Vessel | R2RE/1006   | research vessel | Ship                  | Academic Research Vessel description goes here | Ship         | startCruise;endCruise;other           |     0 |
-| R2RE/1057 | F185_MRU                 | R2RE/1010   | user specified  | UserSpecified         | Coda Octopus F185+ Motion Reference Unit       | F185         | startCalibration;endCalibration;other |     3 |
-|-----------+--------------------------+-------------+-----------------+-----------------------+------------------------------------------------+--------------+---------------------------------------+-------|
-Column Descriptions:
-|----------------+-------------|
-| Header         | Description |
-|----------------+-------------|
-|----------------+-------------|
-** <cruiseid>/ecfm_actions.csv - actions from elogd.cfg
-Actions extracted from elogd.cfg
-Created:
-Sample Records:
-
-Column Descriptions:
-|----------------+-------------|
-| Header         | Description |
-|----------------+-------------|
-|----------------+-------------|
-** <cruiseid>/ecfm_person.csv - persons from elogd.cfg
-Persons extracted from elogd.cfg
-Created:
-Sample Records:
-
-Column Descriptions:
-|----------------+-------------|
-| Header         | Description |
-|----------------+-------------|
-|----------------+-------------|
-** <cruiseid>/novoc_actions.csv - actions not in NVS or R2R vocabs
-** <cruiseid>/novoc_instruments.csv - instruments in NVS or R2R vocabs
-* /shipdata/cruise_maint/vessels
+** vocabs/ - vocabluaries from various locations
+- filenaming convention is <collection_name>_vocab_<vocabnname>.[ct]sv
+- nvs vocabs are semicolon separated
+- r2r vocabs are tab separated
+*** candidate_terms/ - directory to hold candidate terms for other vocabs
+*** nvs_vocab_L05.csv
+*** nvs_vocab_L221.csv
+*** r2r_vocab_activitytype.tsv
+*** r2r_vocab_person.tsv
+*** r2r_vocab_instruments.csv
+*** r2r_vocab_vessel.tsv
+*** r2r_vocab_organization.tsv
+*** r2re_vocab_terms.csv

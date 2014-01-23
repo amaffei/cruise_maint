@@ -1,5 +1,8 @@
 * Introduction
 This document provides descriptions, policies and scripts used to process vocabulary terms associated with the R2R eventlog project. The source is maintained as an org-mode file, accessed using the emacs environment. The directory containing this file and other files related to it can be found at the [[https://github.com/amaffei/r2relogvocabs][GitHub repository]].
+* links
+[[https://beagle.whoi.edu/redmine/projects/r2r/wiki/Vocab_Status_11-27-13][Changes to make to instruements.csv]]
+[[https://docs.google.com/spreadsheet/ccc?key=0AjSDHgC95uZsdEduOEk2VFQ3UXJKNldnZlZIT2c4Qnc&pli=1#gid=0][Google Spreadsheet]]
 * GIT
 We will use git to maintain the code and do versioning on vocab files.
 Best video tutorial on git I've found so far -- http://www.youtube.com/watch?v=OFkgSjRnay4
@@ -76,7 +79,22 @@ stationStart,R2RE/1054,"Research cruise station started"
 stopSample,R2RE/1055,"Sample of material stopped"
 #+end_example
 
+#+BEGIN_SRC perl
+#!/usr/bin/perl
 
+  use strict;
+  use warnings;
+  use Tie::Handle::CSV;
+
+  my $file = "~/git/cruise_maint/edist_cfg/cruises_instruments.csv";
+  my $fh = Tie::Handle::CSV->new ($file, header => 1);
+
+  while (my $csv_line = <$fh>) {
+      print $csv_line->{CruiseID} . ":\t" . $csv_line->{DeviceID} . "\n";
+      }
+
+  close $fh;
+#+END_SRC
 * Todos
 ** TODO consider populating elog-dev:/shipdata/archive/<ship>/<cruiseid> directories w copy of the elogd.cfg that was used during the cruise so they are all in the same place
 ** TODO modify 

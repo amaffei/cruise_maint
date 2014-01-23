@@ -1,0 +1,26 @@
+Device Type	NVS Code	Description, Examples	Short
+acqsys		de/multiplexing and timetagging data acquisition system	[name]
+adcp	L05::115	(acoustic doppler current profiler) sonar measures water current velocities	adcp
+anemometer	L05::101	measures wind speed and direction	wind
+ctd	L05::130	integrated hydro system measures conductivity, temp, pressure, etc.	ctd
+expendableprobe	L05::132	hand/deck-launched single-use probes - XBT, XCTD, XSV, XCP, etc.	xbt
+flowmeter	L05::388	measures rate of water flow - mechanical, optical, electromagnetic, etc.	flow
+fluorometer	L05::113	measures fluorescence (usually for phytoplankton)	fluoro
+gnss	L05::301	(global navigation satellite system) - GPS/WAAS, GLONASS, Galileo, etc.	gnss
+gravimeter	L05::158	measures the Earth's local gravitational field	grav
+gyrocompass	L05::385	compass with a motorized gyroscope that tracks true north (heading)	gyro
+ins	L05::POS19	determines spatial position and motion using high-accuracy inertial sensors with input from additional sensors (eg. satellite fixes)	ins
+magnetometer	L05::159	measure strength and/or direction of the Earth's magnetic field	mag
+metstation	L05::102	integrated meteo system measures temp, pressure, humidity, etc.	met
+multibeam	L05::157	multiple formed beam echosounder (mapping sonar)	mb
+pco2	L05::351	measures partial pressure of dissolved carbon dioxide	pco2
+radiometer	L05::122	measures radiation - pyranometer, pyrheliometer, pyrgeometer, etc.	rad
+raingauge	L05::381	(udometer) measures amount of liquid precipitation	rain
+singlebeam	L05::156	single, dual, or split beam echosounder (profiling sonar)	sb
+speedlog	L05::385	measures Doppler near surface vessel speed through water	speed
+ssv	L05::185	sea surface sound velocimeter - typically input to multibeam	ssv
+thermometer	L05::134	measures air or water temperature	thermo
+timeserver	L05::POS06	reads time from reference clock (GPS, WWVB, etc.) and distributes locally	time
+transmissometer	L05::124	measures fraction of light absorbed or scattered by particles in water	trans
+tsg	L05::133	(thermosalinograph) measures sea surface temp, salinity, etc. at intake	tsg
+winch		measures wire tension, speed, payout, etc.	winch
