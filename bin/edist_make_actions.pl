@@ -5,11 +5,12 @@
   use Tie::Handle::CSV;
 
 #
-# Going to parse instruments_master.csv
-# EcfmID,EcfmName,EcfmDefName,EcfmCategory,EcfmDefActions,Edist,EcfmDesc,TermUri,ModifiedDate
-# R2RE/9011,acqsys,Acqsys,data acquisition system,,Yes,de/multiplexing and timetagging data acquisition system,None,1/23/14
+# Going to parse r2re_terms_master.csv
+# EntryKey,EntryTerm,TermDescription,TermType,ClosestMap,NvsStatus,AvailVocabTerms,ModifiedDate
+# R2RE/1032,WHOI Athena data acquisition system,,DeviceTerm,,tbd,,1/23/14
+# R2RE/1037,cruiseStart,Research cruise started,ActionTerm,,tbd,,1/23/14
 #
-  my $file = "/Users/drumbeat/git/cruise_maint/edist_cfg/instruments_master.csv";
+  my $file = "/Users/drumbeat/git/cruise_maint/edist_cfg/r2re_terms_master.csv";
   my $csv_parser = Text::CSV_XS->new( { 
      quote_char            => '"',
      escape_char           => '"',
@@ -38,19 +39,19 @@
 				  csv_parser => $csv_parser );
 
   #
-  # print instactions.csv header and ALL row
+  # print actions.csv header
   #
-  print "\"EventTerm\",\"DefaultActionTerms\"\n";
-  print "\"ALL\",\"deploy;recover;service;other;startSample;stopSample;maxDepth;abort;startLine;endLine;abortLine;start;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release\"\n";
+  print "\"ActionTerm\",\"ActionID\",\"ActionDescription\"\n";
 
   #
-  # print instruments.csv rows
-  # "R2RE/1034","NOAA SCS data acquisition system","R2RE/9010","data acquisition system","Acqsys","NOAA SCS data acquisition system description goes here"
+  # print actions.csv rows (NOTE: THESE NEED TO BE SORTED LATER)
+  # "abort","R2RE/1035","Aborted device operations"
+  #
   while (my $csv_line = <$fh>) {
       # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
-      if ($csv_line->{Edist} eq "Yes" && $csv_line->{EcfmDefActions} ne "") {
+      if ($csv_line->{TermType} eq "ActionTerm") {
 	  # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
-          print "\"" . $csv_line->{EcfmName} . "\",\"" . $csv_line->{EcfmDefActions} . "\"\n";
+          print "\"" . $csv_line->{EntryTerm} . "\",\"" .$csv_line->{EntryKey} . "\",\"" . $csv_line->{TermDescription} . "\"\n";
       }
       }
 

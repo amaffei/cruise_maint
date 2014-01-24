@@ -22,7 +22,7 @@ cp $vocabdir/r2r_vessel_vocab.tsv $outputdir/voc/vessel.andytest.tsv
 #
 $bindir/edist_make_instruments.pl > $outputdir/voc/instruments.andytest.csv
 $bindir/edist_make_instaction.pl > $outputdir/voc/instactionmap.andytest.csv
-#$bindir/edist_make_actions.pl > $outputdir/voc/actions.andytest.csv
+$bindir/edist_make_actions.pl > $outputdir/voc/actions.andytest.csv
 #
 # make vessels files
 #
