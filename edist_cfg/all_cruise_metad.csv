@@ -1,4 +1,4 @@
-cruiseid,ship,three,four,five,six,seven,eight,nine
+cruiseid,vessel,startyear,startmonth,startday,chiefscientist,cruiseprojectname,cruisestudyarea,cruisecomment
 "AE-X1211","R/V Atlantis Explorer","2012","5","5","David Black","BaRFlux"," "," "
 "EN502","R/V Endeavor","2012","2","8","David Black","BaRFlux"," "," "
 "EN513","R/V Endeavor","2012","8","15","David Black","BaRFlux","Bermuda Rise","BaRFlux IV"
@@ -8,14 +8,13 @@ cruiseid,ship,three,four,five,six,seven,eight,nine
 "KN207-03","R/V Knorr","2012","6","15","Kay Bidle"," "," "," "
 "KN210-04","R/V Knorr","2013","3","25","Elizabeth Kujawinski ","Deepwater DOM","Western Atlantic Ocean","end 9 May; NSF OCE CO funded (data to BCO-DMO) "
 "MGL1211","R/V Langseth","2012","6","11","Suzanne Carbotte","Cascadia Ridge to Trench","Juan de Fuca Plate/Cascadia"," "
-"MV1206","R/V Melville","2012","5","4","Anne M. Trehu","Chili Post-Seismic"," "," "
- 50N 150W to 35N 135W"," "
+"MV1206","R/V Melville","2012","5","4","Anne M. Trehu","Chili Post-Seismic"," "," " 
+"NH1208","R/V New Horizon","2012","8","9","Gareth Lawson","Pteropods & CO2","transect: 50N 150W to 35N 135W"," "
 "OC1206A","R/V Oceanus","2012","6","7","J. Pablo Canales"," "," "," "
 "OC1209A","R/V Oceanus","2012","9","10","Anne M. Trehu"," "," "," "
 "OC1308A","R/V Oceanus","2013","8","18","Emilie Hooft","Cascadia Initiative","Juan de Fuca Plate"," "
 "PS1306","R/V Point Sur"," "," "," ",""," "," "," "
 "RR1301","R/V Roger Revelle","2013","1","20","Bruce Applegate"," "," "," "
-ruiseid,ship,three,four,five,six,seven,eight,nine
 "al130801","R/V M/Y Alucia"," "," "," ",""," "," "," "
 "at25","R/V Atlantis"," "," "," ",""," "," "," "
 "at26-01","R/V Atlantis","2013","5","25","No Science team on board","Transit from Woods Hole to Astoria","No planned science activities - only equipment testing"," "
@@ -24,4 +23,4 @@ ruiseid,ship,three,four,five,six,seven,eight,nine
 "en527","R/V Endeavor","2013","6","19","Joseph P. Montoya","ECOGIG","Gulf of Mexico","ECOGIG WC3"
 "oc1307c","R/V Oceanus","2013","8","1","William Wilcock","Cascadia","Pacific Northwest"," "
 "oc1308B","R/V Oceanus","2013","8","28","Jeff McGuire and Susan Schwartz","Cascadia Initiative Expedition Team","Offshore Oregon and Washington"," "
- OOI-RSN Installation","OOI-RSN NE Pacific sites"," "
+"tn299","R/V Thomas G. Thompson","2013","6","28","Delaney","VISIONS'13: OOI-RSN Installation","OOI-RSN NE Pacific sites"," "
