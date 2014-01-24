@@ -6,7 +6,7 @@
 
 #
 # Going to parse instruments_master.csv
-# EcfmID,EcfmName,EcfmDefName,EcfmCategory,EcfmDefActions,Edist,EcfmDesc,TermUri,ModifiedDate
+# VocabID,VocabName,EcfmDefName,EcfmCategory,EcfmDefActions,Edist,EcfmDesc,TermUri,ModifiedDate
 # R2RE/9011,acqsys,Acqsys,data acquisition system,,Yes,de/multiplexing and timetagging data acquisition system,None,1/23/14
 #
   my $file = "/Users/drumbeat/git/cruise_maint/edist_cfg/instruments_master.csv";
@@ -47,10 +47,10 @@
   # print instruments.csv rows
   # "R2RE/1034","NOAA SCS data acquisition system","R2RE/9010","data acquisition system","Acqsys","NOAA SCS data acquisition system description goes here"
   while (my $csv_line = <$fh>) {
-      # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
+      # print $csv_line->{VocabID} . ":\t" . $csv_line->{VocabName} . "\n";
       if ($csv_line->{Edist} eq "Yes" && $csv_line->{EcfmDefActions} ne "") {
 	  # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
-          print "\"" . $csv_line->{EcfmName} . "\",\"" . $csv_line->{EcfmDefActions} . "\"\n";
+          print "\"" . $csv_line->{EcfmDefName} . "\",\"" . $csv_line->{EcfmDefActions} . "\"\n";
       }
       }
 

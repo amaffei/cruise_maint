@@ -19,10 +19,11 @@ cp $vocabdir/r2r_organization_vocab.tsv $outputdir/voc/organization.andytest.tsv
 cp $vocabdir/r2r_vessel_vocab.tsv $outputdir/voc/vessel.andytest.tsv
 #
 # build instruments.csv and instaction.csv
+# NOTE: perl funniness below sorts all lines but header in a CSV
 #
 $bindir/edist_make_instruments.pl > $outputdir/voc/instruments.andytest.csv
-$bindir/edist_make_instaction.pl > $outputdir/voc/instactionmap.andytest.csv
-$bindir/edist_make_actions.pl > $outputdir/voc/actions.andytest.csv
+$bindir/edist_make_instaction.pl | perl -e 'print scalar <>, sort <>;' | uniq > $outputdir/voc/instactionmap.andytest.csv
+$bindir/edist_make_actions.pl | perl -e 'print scalar <>, sort <>;' > $outputdir/voc/actions.andytest.csv
 #
 # make vessels files
 #

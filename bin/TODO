@@ -1,0 +1,10 @@
+All
+===
+- bombproof these scripts so we know when they barf on a row of a csv file
+- rewrite scripts so they extract info and don't prepend CSV headers. Let the calling program prepend he headers
+- take out the hardcoding of filenames
+- allow arguments. First argument should be <cruise> <vessel> <vocab> <action> <instrument> of action
+
+edist_make_instaction.pl
+========================
+- watch out for EcfmDefNames that have different action lists. Actions should really be tied to VocabName in the ECFM application but too late to change that.

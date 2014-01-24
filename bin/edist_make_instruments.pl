@@ -44,7 +44,7 @@
       # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
       if ($csv_line->{Edist} eq "Yes") {
 	  # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
-          print "\"" . $csv_line->{EcfmID} . "\",\"" . $csv_line->{EcfmName} . "\",\"" . $csv_line->{EcfmDefActions} . "\",\"" . $csv_line->{EcfmCategory} . "\",\"" . $csv_line->{EcfmDefName} . "\",\"" . $csv_line->{EcfmDesc} . "\"\n";
+          print "\"" . $csv_line->{VocabID} . "\",\"" . $csv_line->{VocabName} . "\",\"" . $csv_line->{EcfmDefActions} . "\",\"" . $csv_line->{EcfmCategory} . "\",\"" . $csv_line->{EcfmDefName} . "\",\"" . $csv_line->{EcfmDesc} . "\"\n";
       }
       }
 

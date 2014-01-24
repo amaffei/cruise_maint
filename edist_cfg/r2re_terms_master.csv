@@ -1,4 +1,4 @@
-EntryKey,EntryTerm,TermDescription,TermType,ClosestMap,NvsStatus,AvailVocabTerms,ModifiedDate
+EntryKey,EntryTerm,TermDescription,TermType,ClosestMap,MapStatus,AvailVocabTerms,ModifiedDate
 R2RE/1001,biology pumps,,DeviceCatTerm,,tbd,,1/23/14
 R2RE/1002,Biology Pump,"Device that pumps seawater and collects matter, usually on a filter",DeviceTerm,,DoNotUse,,1/23/14
 R2RE/1003,ADCP75,"An Acoustic Doppler Current Profiler, or Acoustic Doppler Profiler, is often referred to with the acronym ADCP. Scientists use the instrument to measure how fast water is moving across an entire water column. An ADCP anchored to the seafloor can measure current speed not just at the bottom, but also at equal intervals all the way up to the surface. The instrument can also be mounted horizontally on seawalls or bridge pilings in rivers and canals to measure the current profile from shore to shore, and to the bottoms of ships to take constant current measurements as the boats move. In very deep areas, they can be lowered on a cable from the surface.  The ADCP measures water currents with sound (75kHz), using a principle of sound waves called the Doppler effect.",DeviceTerm,L05:115,morespecific?,L05:115 - current profilers,1/23/14
@@ -46,7 +46,7 @@ R2RE/1044,maxextensionWire,Winch wire at maximum extension,ActionTerm,,tbd,,1/23
 R2RE/1045,maxspeedWire,Winch wire at maximum speed,ActionTerm,,tbd,,1/23/14
 R2RE/1046,other,Other device/vehicle action,ActionTerm,,tbd,,1/23/14
 R2RE/1047,recover,Recover device/vehicle,ActionTerm,,tbd,,1/23/14
-R2RE/1048,release,Relase device/vehicle,ActionTerm,,tbd,,1/23/14
+R2RE/1048,release,Release device/vehicle,ActionTerm,,tbd,,1/23/14
 R2RE/1049,service,Service device/vehicle,ActionTerm,,tbd,,1/23/14
 R2RE/1050,startLine,Sampling line started,ActionTerm,,tbd,,1/23/14
 R2RE/1051,startSafetydrill,Safety drill started,ActionTerm,,tbd,,1/23/14
@@ -56,7 +56,8 @@ R2RE/1054,stationStart,Research cruise station started,ActionTerm,,tbd,,1/23/14
 R2RE/1055,stopSample,Sample of material stopped,ActionTerm,,tbd,,1/23/14
 R2RE/1056,Thermosalinograph SBE21,"The SBE 21 accurately determines sea surface temperature and conductivity from underway vessels. Data is simultaneously stored in memory and transmitted to a computer serial port, allowing independent data logging and real-time data acquisition. Typically mounted near the ship's seawater intake, the SBE 21 is connected to an AC-powered interface box positioned near the computer. The interface box provides power and an isolated data interface, and contains a NMEA 0183 port for appending navigation information to the data stream.",DeviceTerm,,tbd,,1/23/14
 R2RE/1057,User Specified Instrument,Instrument that does not have a controlled vocabulary term,DeviceTerm,,tbd,,1/23/14
-R2RE/1058,MOCNESS,"MOCNESS is a Multiple Opening/Closing Net and Environmental Sensing System which samples forplankton in the ocean. The system is towed behind a research vessel and consists of five to twenty nets with a mesh size from 64 µm to 3 mm and an area of 1 to 10 sqm.",DeviceTerm,,tbd,,1/23/14
+R2RE/1058,MOCNESS,MOCNESS is a Mlutiple Opening / Closing Net and Environmental Sensing System which samples for plankton in the ocean. The system is towed behind a research vessel and consists of 5 to 20 nets with a mesh size from 64 micrometers to 3 millimeters and an area of 1 to 10 square meters.,DeviceTerm,,tbd,,1/23/14
+R2RE/1059,pointSample,Sample at single instant of time,ActionTerm,,termPending,,1/24/14
 R2RE/9010,data acquisition system,,DeviceCatTerm,,tbd,,1/23/14
 R2RE/9011,acqsys,de/multiplexing and timetagging data acquisition system,DeviceTerm,,tbd,R2R:dt:acqsys - acqsys,1/23/14
 R2RE/9012,ADCP,(acoustic doppler current profiler) sonar measures water current velocities,DeviceTerm,L05:115,bettermatch?,L05:115 - current profilers,1/23/14
