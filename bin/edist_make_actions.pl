@@ -4,6 +4,11 @@
   use warnings;
   use Tie::Handle::CSV;
 
+#
+# Going to parse instruments_master.csv
+# EcfmID,EcfmName,EcfmDefName,EcfmCategory,EcfmDefActions,Edist,EcfmDesc,TermUri,ModifiedDate
+# R2RE/9011,acqsys,Acqsys,data acquisition system,,Yes,de/multiplexing and timetagging data acquisition system,None,1/23/14
+#
   my $file = "/Users/drumbeat/git/cruise_maint/edist_cfg/instruments_master.csv";
   my $csv_parser = Text::CSV_XS->new( { 
      quote_char            => '"',
@@ -33,18 +38,19 @@
 				  csv_parser => $csv_parser );
 
   #
-  # print instruments.csv header
+  # print instactions.csv header and ALL row
   #
-  print "\"DeviceID\",\"DeviceTerm\",\"DeviceDefActions\",\"DeviceCategory\",\"DefaultInstrumentTerm\",\"DeviceDescription\"\n";
+  print "\"EventTerm\",\"DefaultActionTerms\"\n";
+  print "\"ALL\",\"deploy;recover;service;other;startSample;stopSample;maxDepth;abort;startLine;endLine;abortLine;start;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release\"\n";
 
   #
   # print instruments.csv rows
   # "R2RE/1034","NOAA SCS data acquisition system","R2RE/9010","data acquisition system","Acqsys","NOAA SCS data acquisition system description goes here"
   while (my $csv_line = <$fh>) {
       # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
-      if ($csv_line->{Edist} eq "Yes") {
+      if ($csv_line->{Edist} eq "Yes" && $csv_line->{EcfmDefActions} ne "") {
 	  # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
-          print "\"" . $csv_line->{EcfmID} . "\",\"" . $csv_line->{EcfmName} . "\",\"" . $csv_line->{EcfmDefActions} . "\",\"" . $csv_line->{EcfmCategory} . "\",\"" . $csv_line->{EcfmDefName} . "\",\"" . $csv_line->{EcfmDesc} . "\"\n";
+          print "\"" . $csv_line->{EcfmName} . "\",\"" . $csv_line->{EcfmDefActions} . "\"\n";
       }
       }
 
