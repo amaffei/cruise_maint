@@ -4,12 +4,7 @@
   use warnings;
   use Tie::Handle::CSV;
 
-#
-# Going to parse vessels_master.csv
-# VesselID,PreferredName,VocabID,VocabName,Edist,Modified
-# ae,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/14
-#
-  my $file = "/Users/drumbeat/git/cruise_maint/edist_cfg/vessels_master.csv";
+  my $file = "/Users/drumbeat/git/cruise_maint/edist_cfg/instruments_master.csv";
   my $csv_parser = Text::CSV_XS->new( { 
      quote_char            => '"',
      escape_char           => '"',
@@ -38,18 +33,18 @@
 				  csv_parser => $csv_parser );
 
   #
-  # print xx_instruments.csv header and ALL row
+  # print 3-column instrument header in redmine table format
   #
-  print "\"DefaultInstrumentTerm\",\"DeviceID\",\"DeviceTerm\"\n";
+  print "";
 
   #
   # print instruments.csv rows
   # "R2RE/1034","NOAA SCS data acquisition system","R2RE/9010","data acquisition system","Acqsys","NOAA SCS data acquisition system description goes here"
   while (my $csv_line = <$fh>) {
-      # print $csv_line->{VocabID} . ":\t" . $csv_line->{VocabName} . "\n";
-      if ($csv_line->{Edist} eq "Yes" && $csv_line->{VesselID} eq "sq") {
-	  # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
-          print "\"" . $csv_line->{PreferredName} . "\",\"" . $csv_line->{VocabID} . "\",\"" . $csv_line->{VocabName} . "\"\n";
+      # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
+      if ($csv_line->{Edist} eq "Yes") {
+          # print "|" . $csv_line->{EcfmCategory} . "|" . $csv_line->{VocabName} . "(" . $csv_line->{VocabID} . ") |" . $csv_line->{EcfmDefName} . "|" . $csv_line->{EcfmDefActions} . "|\n";
+          print "|" . $csv_line->{EcfmCategory} . "|" . $csv_line->{VocabName} . " _(" . $csv_line->{VocabID} . ")_|" . $csv_line->{EcfmDefName} . "|\n";
       }
       }
 
