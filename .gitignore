@@ -2,3 +2,5 @@
 bin/tmp/*
 edist_cfg/tmp/*
 #cruises/*
+edist_test/voc/*
+edist_test/vessels/*
