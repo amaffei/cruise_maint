@@ -58,6 +58,7 @@ R2RE/1056,Thermosalinograph SBE21,"The SBE 21 accurately determines sea surface 
 R2RE/1057,User Specified Instrument,Instrument that does not have a controlled vocabulary term,DeviceTerm,,tbd,,1/23/14
 R2RE/1058,MOCNESS,MOCNESS is a Mlutiple Opening / Closing Net and Environmental Sensing System which samples for plankton in the ocean. The system is towed behind a research vessel and consists of 5 to 20 nets with a mesh size from 64 micrometers to 3 millimeters and an area of 1 to 10 square meters.,DeviceTerm,,tbd,,1/23/14
 R2RE/1059,pointSample,Sample at single instant of time,ActionTerm,,termPending,,1/24/14
+R2RE/1060,bucket,Used to take a water sample from the seasurface,DeviceTerm,,termPending,,1/28/14
 R2RE/9010,data acquisition system,,DeviceCatTerm,,tbd,,1/23/14
 R2RE/9011,acqsys,de/multiplexing and timetagging data acquisition system,DeviceTerm,,tbd,R2R:dt:acqsys - acqsys,1/23/14
 R2RE/9012,ADCP,(acoustic doppler current profiler) sonar measures water current velocities,DeviceTerm,L05:115,bettermatch?,L05:115 - current profilers,1/23/14
@@ -142,7 +143,7 @@ R2RE/9090,Kongsberg (Simrad) ES60 split beam echosounder,,DeviceTerm,,tbd,,1/23/
 R2RE/9091,Kongsberg EM EM710 multibeam echosounder,"Konsberg EM701 multibeam, scientist use the system to obtain detailed maps of the seafloor",DeviceTerm,,tbd,,1/23/14
 R2RE/9092,Kongsberg Topas PS18,Kongsberg TOPAS PS 18 parametric sub-bottom profilers comprises of the following:Transducer - 8 x 16 channels Transceiver U,DeviceTerm,,tbd,,1/23/14
 R2RE/9093,Teledyne RDI Ocean Surveyor 150kHz vessel-mounted ADCP,The Teledyne RDI 150kHz Ocean Surveyor vessel-mounted acoustic Doppler current profiler is designed for continuous current profiling from a moving ship,DeviceTerm,,tbd,,1/23/14
-R2RE/9094,Simrad Split beam EK60,Simrad EK60 Scientific echo sounderMulti frequency application for species identification Simultaneous transmission of all frequencies,DeviceTerm,,tbd,,1/23/14
+R2RE/9094,Simrad Split beam EK60,Simrad EK60 Scientific echo sounderMulti frequency application for species identification Simultaneous transmission of all frequencies,DeviceTerm,L22/TOOL0198,tbd,L22/TOOL0198,1/23/14
 R2RE/9095,Acoustic Centerboard,an acoustic drop keel (Centerboard). The centerboard is an extension of the hull that can be raised and lowered in the water in order to position the EK 60 spit beam array below the bubble sweep down of the hull and surface bubbles. ,DeviceTerm,,tbd,,1/23/14
 R2RE/9096,Soundguard Hydrophone Array,Towed hydrophone array,DeviceTerm,,tbd,,1/23/14
 R2RE/9097,LDS Logger ,LDS is the LDEO Data System. It is an architecture and collection of software for the automated logging of real-time data sources,DeviceTerm,,bettermatch?,R2R:dt:acqsys - acqsys,1/23/14
