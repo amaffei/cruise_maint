@@ -44,13 +44,15 @@
   # print instruments.csv rows
   # "R2RE/1034","NOAA SCS data acquisition system","R2RE/9010","data acquisition system","Acqsys","NOAA SCS data acquisition system description goes here"
   while (my $csv_line = <$fh>) {
-      if ($csv_line->{Edist} eq "Maybe") {
+      # if ($csv_line->{Edist} eq "Maybe") {
           # print "|" . $csv_line->{EcfmCategory} . "|" . $csv_line->{VocabName} . "|" . $csv_line->{EcfmDefName} . "|" . $csv_line->{EcfmDefActions} . "|\n";
           # print "|" . $csv_line->{EcfmCategory} . "|" . $csv_line->{VocabName} . " _(" . $csv_line->{VocabID} . ")_|" . $csv_line->{EcfmDefName} . "|\n";
-          print "| " . $csv_line->{EcfmCategory} . "|" . $csv_line->{VocabName} . "|" . $csv_line->{EcfmDefName} . "|\n";
-      }
+          # print "| " . $csv_line->{EcfmCategory} . "|" . $csv_line->{VocabName} . "|" . $csv_line->{EcfmDefName} . "|\n";
+      # }
 if ($csv_line->{Edist} eq "Yes") {
-          print "|+" . $csv_line->{EcfmCategory} . "+|+" . $csv_line->{VocabName} . "+|+" . $csv_line->{EcfmDefName} . "+|\n";
+          # print "|+" . $csv_line->{EcfmCategory} . "+|+" . $csv_line->{VocabName} . "+|+" . $csv_line->{EcfmDefName} . "+|\n";
+          # print "|+" . $csv_line->{EcfmCategory} . "+|+" . $csv_line->{VocabName} . "+|+" . $csv_line->{EcfmDefName} . "+|+" . $csv_line->{EcfmDefActions} . "+|\n";
+          print "| " . $csv_line->{EcfmCategory} . " | " . $csv_line->{VocabName} . " | " . $csv_line->{EcfmDefName} . " | " . $csv_line->{EcfmDefActions} . " |\n";
       }
       }
 
