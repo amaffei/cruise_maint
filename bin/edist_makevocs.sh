@@ -20,24 +20,25 @@ fi
 rm $outputdir/voc/*
 rm $outputdir/vessels/*
 #
-# copy r2r vocab files from voc dir
+# get the info/tsv files from rvdata
 #
-cp $vocabdir/r2r_person_vocab.tsv $outputdir/voc/person.$version.tsv
-cp $vocabdir/r2r_activitytype_vocab.tsv $outputdir/voc/activitytype.$version.tsv
-cp $vocabdir/r2r_organization_vocab.tsv $outputdir/voc/organization.$version.tsv
-cp $vocabdir/r2r_vessel_vocab.tsv $outputdir/voc/vessel.$version.tsv
-#
+for file in activitytype organization person vessel
+do
+    infourl=http://get.rvdata.us/services/voc/?id=$file
+    wget $infourl -O $outputdir/voc/$file.$version.tsv
+done
+
 # build instruments.csv and instaction.csv
 # NOTE: perl funniness below sorts all lines but header in a CSV
 #
 $bindir/edist_make_instruments.pl  > $outputdir/voc/instruments.$version.csv
-$bindir/edist_make_actions.pl | perl -e 'print scalar <>, sort <>;' > $outputdir/voc/actions.$version.csv
+$bindir/edist_make_actions.pl | perl -e 'print scalar <>, sort <>;' > $outputdir/voc/actions\_$version.csv
 #
 # make instactionmap.csv
 #
-echo "\"EventTerm\",\"DefaultActionTerms\"" > $outputdir/voc/instactionmap.$version.csv
-echo "\"ALL\",\"deploy;recover;service;other;startSample;stopSample;maxDepth;abort;startLine;endLine;abortLine;start;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release\"" >> $outputdir/voc/instactionmap.$version.csv
-$bindir/edist_make_instaction.pl | perl -e 'print scalar <>, sort <>;' | uniq >> $outputdir/voc/instactionmap.$version.csv
+echo "\"EventTerm\",\"DefaultActionTerms\"" > $outputdir/voc/instactionmap\_$version.csv
+echo "\"ALL\",\"deploy;recover;service;other;startSample;stopSample;maxDepth;abort;startLine;endLine;abortLine;start;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release\"" >> $outputdir/voc/instactionmap\_$version.csv
+$bindir/edist_make_instaction.pl | perl -e 'print scalar <>, sort <>;' | uniq >> $outputdir/voc/instactionmap\_$version.csv
 #
 # make vessel instrument files
 #
