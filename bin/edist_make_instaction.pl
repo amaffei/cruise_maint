@@ -38,16 +38,9 @@
 				  csv_parser => $csv_parser );
 
   #
-  # print instactions.csv header and ALL row
-  #
-  print "\"EventTerm\",\"DefaultActionTerms\"\n";
-  print "\"ALL\",\"deploy;recover;service;other;startSample;stopSample;maxDepth;abort;startLine;endLine;abortLine;start;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release\"\n";
-
-  #
   # print instruments.csv rows
   # "R2RE/1034","NOAA SCS data acquisition system","R2RE/9010","data acquisition system","Acqsys","NOAA SCS data acquisition system description goes here"
   while (my $csv_line = <$fh>) {
-      # print $csv_line->{VocabID} . ":\t" . $csv_line->{VocabName} . "\n";
       if ($csv_line->{Edist} eq "Yes" && $csv_line->{EcfmDefActions} ne "") {
 	  # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
           print "\"" . $csv_line->{EcfmDefName} . "\",\"" . $csv_line->{EcfmDefActions} . "\"\n";

@@ -41,10 +41,10 @@
   # print instruments.csv rows
   # "R2RE/1034","NOAA SCS data acquisition system","R2RE/9010","data acquisition system","Acqsys","NOAA SCS data acquisition system description goes here"
   while (my $csv_line = <$fh>) {
-      # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
       if ($csv_line->{Edist} eq "Yes") {
 	  # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
           print "\"" . $csv_line->{VocabID} . "\",\"" . $csv_line->{VocabName} . "\",\"" . $csv_line->{EcfmDefActions} . "\",\"" . $csv_line->{EcfmCategory} . "\",\"" . $csv_line->{EcfmDefName} . "\",\"" . $csv_line->{EcfmDesc} . "\"\n";
+          # print "\"" . $csv_line->{VocabID} . "\",\"" . $csv_line->{EcfmCategory} . "\:" . $csv_line->{VocabName} . "\",\"" . $csv_line->{EcfmDefActions} . "\",\"" . $csv_line->{EcfmCategory} . "\",\"" . $csv_line->{EcfmDefName} . "\",\"" . $csv_line->{EcfmDesc} . "\"\n";
       }
       }
 

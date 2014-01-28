@@ -22,9 +22,13 @@ cp $vocabdir/r2r_vessel_vocab.tsv $outputdir/voc/vessel.andytest.tsv
 # NOTE: perl funniness below sorts all lines but header in a CSV
 #
 $bindir/edist_make_instruments.pl > $outputdir/voc/instruments.andytest.csv
-$bindir/edist_make_instaction.pl | perl -e 'print scalar <>, sort <>;' | uniq > $outputdir/voc/instactionmap.andytest.csv
 $bindir/edist_make_actions.pl | perl -e 'print scalar <>, sort <>;' > $outputdir/voc/actions.andytest.csv
-
+#
+# make instactionmap.csv
+#
+echo "\"EventTerm\",\"DefaultActionTerms\"" > $outputdir/voc/instactionmap.andytest.csv
+echo "\"ALL\",\"deploy;recover;service;other;startSample;stopSample;maxDepth;abort;startLine;endLine;abortLine;start;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release\"" >> $outputdir/voc/instactionmap.andytest.csv
+$bindir/edist_make_instaction.pl | perl -e 'print scalar <>, sort <>;' | uniq >> $outputdir/voc/instactionmap.andytest.csv
 #
 # make vessel instrument files
 #

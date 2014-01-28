@@ -73,7 +73,7 @@ R2RE/9021,gyrocompass,compass with a motorized gyroscope that tracks true north 
 R2RE/9022,HDSS,,DeviceTerm,,tbd,,1/23/14
 R2RE/9023,magnetometer,measure strength and/or direction of the Earth's magnetic field,DeviceTerm,L05:159,match,L05:159 - magnetometers,1/23/14
 R2RE/9024,metstation,"integrated meteorological system measures temperature, pressure, humidity, etc.",DeviceTerm,L05:102,match,L05:102 - meteorological packages,1/23/14
-R2RE/9025,MRU,"(motion reference unit) measures pitch, roll, heave, and heading",DeviceTerm,,tbd,,1/23/14
+R2RE/9025,Motion Reference Unit,"(motion reference unit) measures pitch, roll, heave, and heading",DeviceTerm,,tbd,,1/23/14
 R2RE/9026,multibeam,multiple formed beam mapping sonar system,DeviceTerm,L05:157,match,L05:157 - multibeam echosounder,1/23/14
 R2RE/9027,PCO2,measures partial pressure of dissolved carbon dioxide,DeviceTerm,L05:351,bettermatch?,L05:351 - dissolved gas sensors,1/23/14
 R2RE/9028,radiometer,"measures radiation - pyranometer, pyrheliometer, pyrgeometer, albedometer, etc.",DeviceTerm,L05:122,match,L05:122 - radiometers,1/23/14
