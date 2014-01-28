@@ -1,8 +1,10 @@
 OrganizationID	Name	Acronym	CountryID
 com.3phoenix	3Phoenix, Inc.	3Phoenix	us
+dk.au	Aarhus University	Aarhus	dk
 tw.edu.sinica	Academia Sinica	Sinica	tw
 com.aecom.ensr	AECOM/ENSR	ENSR	us
 com.alionscience	Alion Science and Technology	Alion	us
+edu.allegheny	Allegheny College	Allegheny	us
 com.amloceanographic	AML Oceanographic	AML	ca
 com.ampactech	AMPAC, Inc.	AMPAC	us
 edu.appstate	Appalachian State University	App State	us
@@ -21,12 +23,13 @@ edu.barnard	Barnard College	Barnard	us
 com.bellaero	Bell Aerospace TEXTRON	Bell	us
 edu.bbsr	Bermuda Biological Station for Research	BBSR	bm
 edu.bios	Bermuda Institute of Ocean Sciences	BIOS	bm
-org.bigelow	Bigelow Laboratory for Ocean Sciences	BLOS	us
+org.bigelow	Bigelow Laboratory for Ocean Sciences	Bigelow	us
 edu.binghamton	Binghamton University	Binghamton	us
 com.biospherical	Biospherical Instruments, Inc.	Biospherical	us
 no.uib.bjerknes	Bjerknes Centre for Climate Research	BCCR	no
 com.scimar	BMT Scientific Marine Services, Inc.	BMT	us
 edu.boisestate	Boise State University	Boise State	us
+edu.bc	Boston College	BC	us
 edu.bu	Boston University	BU	us
 edu.brown	Brown University	Brown	us
 au.gov.bom	Bureau of Meteorology	BOM	au
@@ -42,6 +45,7 @@ edu.unh.ccom	Center for Coastal and Ocean Mapping	CCOM	us
 de.marum	Center for Marine Environmental Sciences	MARUM	de
 tw.gov.moeacgs	Central Geological Survey, MOEA	MOEACGS	tw
 mx.cicese	Centro de Investigación Científica y de Educación Superior de Ensenada	CICESE	mx
+edu.cuny.ccny	City College	City College	us
 edu.coastal	Coastal Carolina University	CCU	us
 com.coastalenvironmental	Coastal Environmental Systems, Inc.	Coastal	us
 edu.colgate	Colgate University	Colgate University	us
@@ -58,8 +62,11 @@ ca.dal	Dalhousie University	Dalhousie	ca
 com.wagner	Daniel H. Wagner Associates, Inc.	Wagner	us
 mil.darpa	Defense Advanced Research Projects Agency	DARPA	us
 gov.state	Department of State	USDOS	us
+com.discovermagazine	Discover Magazine	Discover	us
 edu.duke.marinelab	Duke/UNC Oceanographic Consortium	Duke/UNC	us
 edu.duke	Duke University	Duke	us
+uk.ac.dur	Durham University	Durham	gb
+org.earthesi	Earth and Ecological Science Institute	EESI	us
 edu.ecu	East Carolina University	ECU	us
 fr.ens	École Normale Supérieure	ENS	fr
 com.chouest	Edison Chouest Offshore	Chouest	us
@@ -88,13 +95,13 @@ com.anteon	General Dynamics Information Technology	Anteon	us
 com.generaloceanics	General Oceanics, Inc.	General Oceanics	us
 com.geoacoustics	GeoAcoustics, Inc.	GeoAcoustics	gb
 ca.gc.nrcan.gsc	Geological Survey of Canada	GSC	ca
+dk.geus	Geological Survey of Denmark and Greenland	GEUS	dk
 il.gov.gsi	Geological Survey of Israel	GSI	il
 jp.gsj	Geological Survey of Japan	GSJ	jp
 com.geo-marine	Geo-Marine	Geo-Marine	us
 com.geometrics	Geometrics	Geometrics	us
 edu.gatech	Georgia Institute of Technology	Georgia Tech	us
 uk.co.gill	Gill Instruments Ltd.	Gill	gb
-nz.cri.gns	GNS Science	GNS	nz
 gov.nasa.gsfc	Goddard Space Flight Center	GSFC	us
 com.golder	Golder Associates, Inc.	Golder	us
 org.moore	Gordon & Betty Moore Foundation	Moore	us
@@ -110,11 +117,14 @@ es.csic.icm	Institut de Ciències del Mar	ICM	es
 fr.ipgp	Institut de Physique du Globe de Paris	IPGP	fr
 org.ife	Institute for Exploration	IFE	us
 org.systemsbiology	Institute for Systems Biology	ISB	us
+edu.colorado.instaar	Institute of Arctic and Alpine Research	INSTAAR	us
+nz.cri.gns	Institute of Geological and Nuclear Sciences Ltd.	IGNS	nz
 com.its	Instrument & Technical Systems, Inc.	ITS	us
 com.intecsea	INTECSEA	INTEC	us
 org.iedadata	Integrated Earth Data Applications	IEDA	us
 com.ixsea	iXSea, Inc.	iXSea	us
 org.jcvi	J. Craig Venter Institute	Venter	us
+gov.nasa.jpl	Jet Propulsion Laboratory	JPL	us
 com.jmsnet	JMS Naval Architects & Salvage Engineers	JMS	us
 edu.jhu	Johns Hopkins University	JHU	us
 edu.jhuapl	Johns Hopkins University Applied Physics Laboratory	JHU APL	us
@@ -124,6 +134,7 @@ de.uni-kiel	Kiel University	Kiel	de
 com.knudsenengineering	Knudsen Engineering Ltd.	Knudsen	ca
 com.kongsberg	Kongsberg Underwater Technology, Inc.	Kongsberg	no
 kr.re.kopri	Korea Polar Research Institute	KOPRI	kr
+edu.kutztown	Kutztown University	Kutztown	us
 de.elac-nautik	L-3 ELAC Nautik GmbH	L-3/SeaBeam	de
 com.lacosteromberg	Lacoste and Romberg Scintrex, Inc.	L&R	us
 edu.columbia.ldeo	Lamont-Doherty Earth Observatory	LDEO	us
@@ -146,6 +157,7 @@ de.mpi-bremen	Max Planck Institute for Marine Microbiology	MPI-MM	de
 es.csic.cmima	Mediterranean Center for Marine and Environmental Research	CMIMA	es
 ca.mun	Memorial University	Memorial	ca
 edu.msu	Michigan State University	MSU	us
+edu.middlebury	Middlebury College	Middlebury	us
 to.gov.lands	Ministry of Lands, Survey, Natural Resources and Environment	MLSNRE	to
 tw.gov.mnd	Ministry of National Defense	MND	tw
 us.mn.state.dnr	Minnesota Department of Natural Resources	MNDNR	us
@@ -158,6 +170,7 @@ tw.edu.ndu	National Defense University	NDU	tw
 gov.noaa.natice	National Ice Center	NIC	us
 org.niust	National Institute for Undersea Science and Technology	NIUST	us
 org.nio	National Institute of Oceanography	NIO	in
+gr.noa	National Observatory of Athens	NOA	gr
 uk.ac.soton.noc	National Oceanography Centre, Southampton	NOCS	gb
 gov.nsf	National Science Foundation	NSF	us
 tw.edu.ntu	National Taiwan University	NTU	tw
@@ -204,25 +217,31 @@ gov.ornl	Oak Ridge National Laboratory	ORNL	us
 com.oceandata	Ocean Data Equipment Corporation	ODEC	us
 com.oceandatatech	Ocean Data Technologies, Inc.	ODT	us
 com.oceaneering	Oceaneering International, Inc.	Oceaneering	us
+com.oceangate	OceanGate, Inc.	OceanGate	us
 org.oceantechnology	Ocean Technology Foundation	OTF	us
 de.oceanwaves	OceanWaveS GmbH	OceanWaveS	de
 com.brooke-ocean	ODIM Brooke Ocean	Brooke Ocean	ca
 mil.navy.onr	Office of Naval Research	ONR	us
 edu.osu	Ohio State University	Ohio State	us
 edu.odu	Old Dominion University	ODU	us
+gov.noaa.olympiccoast	Olympic Coast Discovery Center	OCDC	us
 com.opticalscientific	Optical Scientific, Inc.	OSI	us
 edu.ohsu	Oregon Health & Science University	OHSU	us
 edu.oregonstate	Oregon State University	OSU	us
 edu.psu	Pennsylvania State University	Penn State	us
 ph.gov.dost.phivolcs	Philippine Institute of Volcanology and Seismology	PHIVOLCS	ph
+uk.ac.pml	Plymouth Marine Laboratory	PML	gb
+org.porg	Polar Oceans Research Group	PORG	us
 cl.uc	Pontificia Universidad Católica de Chile	UC	cl
 cl.ucv	Pontificia Universidad Católica de Valparaíso	PUCV	cl
 edu.pdx	Portland State University	Portland State	us
 edu.princeton	Princeton University	Princeton	us
 org.pwssc	Prince William Sound Science Center	PWSSC	us
 com.proteqcorp	ProteQ	ProteQ	us
+edu.purdue	Purdue University	Purdue	us
 edu.cuny.qc	Queens College	Queens	us
 ca.queensu	Queen's University	Queen's	ca
+org.quileutenation	Quileute Department of Natural Resources	QDNR	us
 com.raytheon	Raytheon Company	Raytheon	us
 com.raytheon.rpsc	Raytheon Polar Services Company	RPSC	us
 com.raytheon.rps	Raytheon Professional Services	RPS	us
@@ -232,6 +251,7 @@ com.youngusa	R.M. Young Company	RM Young	us
 com.rockwellcollins	Rockwell Collins, Inc.	Rockwell Collins	us
 us.rvdata	Rolling Deck to Repository	R2R	us
 com.rolls-royce	Rolls-Royce Group plc	Rolls-Royce	gb
+org.roundriver	Round River Conservation Studies	Round River	us
 com.rowemachineworks	Rowe Machine Works	Rowe	us
 nl.nioz	Royal Netherlands Institute for Sea Research	NIOZ	nl
 ca.royalroads	Royal Roads University	RRU	ca
@@ -255,6 +275,7 @@ edu.seattleu	Seattle University	Seattle	us
 com.seawardservices	Seaward Services, Inc.	Seaward	us
 kr.ac.snu	Seoul National University	SNU	kr
 uk.co.sgbrown	S.G. Brown	SGB	gb
+ca.sfu	Simon Fraser University	SFU	ca
 com.sippican	Sippican, Inc.	Sippican	us
 edu.usg.skio	Skidaway Institute of Oceanography	SkIO	us
 edu.siu	Southern Illinois University	SIU	us
@@ -265,6 +286,7 @@ fr.sb-roscoff	Station Biologique de Roscoff	SBR	fr
 edu.stonybrook	Stony Brook University	Stony Brook	us
 com.subsea-usa	Subsea Systems, Inc.	Subsea	us
 edu.susqu	Susquehanna University	Susquehanna	us
+com.tbsmith	T. Baker Smith, LLC	TBS	us
 com.teckcominco	Teck Cominco	Teck	us
 com.benthos	Teledyne Benthos	Benthos	us
 com.rdinstruments	Teledyne RD Instruments	RDI	us
@@ -279,9 +301,11 @@ com.turnerdesigns	Turner Designs, Inc.	Turner	us
 au.com.turo	Turo Technology Pty Ltd	Turo	au
 com.ultra-os	Ultra Electronics Ocean Systems	Ultra OS	us
 edu.umpqua	Umpqua Community College	Umpqua	us
+gov.usap	United States Antarctic Program	USAP	us
 mil.uscg	United States Coast Guard	USCG	us
 gov.usgs	United States Geological Survey	USGS	us
 mil.navy	United States Navy	USN	us
+mx.uabc	Universidad Autónoma de Baja California	UABC	mx
 cl.udec	Universidad de Concepción	UdeC	cl
 pt.ua	Universidade de Aveiro	Aveiro	pt
 cr.ac.una	Universidad Nacional de Costa Rica	UNA	cr
@@ -300,7 +324,9 @@ edu.uaf	University of Alaska Fairbanks	UAF	us
 edu.arizona	University of Arizona	Arizona	us
 gr.uoa	University of Athens	Athens	gr
 no.uib	University of Bergen	Bergen	no
+uk.ac.birmingham	University of Birmingham	Birmingham	gb
 edu.berkeley	University of California, Berkeley	Berkeley	us
+edu.ucdavis	University of California, Davis	UC Davis	us
 edu.uci	University of California, Irvine	UCI	us
 edu.ucla	University of California, Los Angeles	UCLA	us
 edu.ucsb	University of California, Santa Barbara	UCSB	us
@@ -311,6 +337,7 @@ edu.colorado	University of Colorado at Boulder	Colorado	us
 edu.uconn	University of Connecticut	U.Conn	us
 edu.udel	University of Delaware	Delaware	us
 uk.ac.uea	University of East Anglia	UEA	gb
+uk.ac.ed	University of Edinburgh	Edinburgh	gb
 edu.ufl	University of Florida	Florida	us
 uk.ac.gla	University of Glasgow	Glasgow	gb
 ht.edu.ueh	University of Haiti	UEH	ht
@@ -318,8 +345,8 @@ edu.hawaii	University of Hawaii	Hawaii	us
 org.uhdas	University of Hawaii Currents Group	UH Currents	us
 edu.uidaho	University of Idaho	Idaho	us
 edu.uic	University of Illinois at Chicago	UIC	us
-edu.ull	University of Louisiana at Lafayette	ULL	us
 edu.louisiana	University of Louisiana at Lafayette	Louisiana	us
+edu.ull	University of Louisiana at Lafayette	ULL	us
 edu.umaine	University of Maine	Maine	us
 edu.umd	University of Maryland	Maryland	us
 edu.umces	University of Maryland Center for Environmental Science	UMCES	us
@@ -344,6 +371,7 @@ ca.uottawa	University of Ottawa	Ottawa	ca
 uk.ac.ox	University of Oxford	Oxford	gb
 edu.upenn	University of Pennsylvania	Penn	us
 uk.ac.plymouth	University of Plymouth	Plymouth	gb
+edu.upr	University of Puerto Rico	UPR	us
 edu.uri	University of Rhode Island	URI	us
 edu.rochester	University of Rochester	University of Rochester	us
 edu.sandiego	University of San Diego	USD	us
@@ -375,6 +403,7 @@ unknown	unknown device	(unknown)	us
 mil.army.usace	U.S. Army Corps of Engineers	USACE	us
 gov.fws	U.S. Fish & Wildlife Service	FWS	us
 com.vaisala	Vaisala	Vaisala	fi
+edu.vanderbilt	Vanderbilt University	Vanderbilt	us
 edu.vermontlaw	Vermont Law School	VLS	us
 edu.vims	Virginia Institute of Marine Science	VIMS	us
 edu.vyatka	Vyatka State Agricultural Academy	Vyatka	us
