@@ -1,6 +1,8 @@
 #!/bin/bash
 # edist_make_vocs.sh [test]
 # providing the argument "test" creates files in the edist_test directory, othwewise in edist_files
+# TODO
+# - Add logic to only make actions.csv list that contains actions found in instruments included in edist. No more, no less
 topdir=~drumbeat/git/cruise_maint
 configdir=$topdir/edist_cfg
 vocabdir=$topdir/vocabs
