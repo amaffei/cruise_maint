@@ -1,7 +1,7 @@
 "DefaultInstrumentTerm","DeviceID","DeviceTerm"
 "ADCP75","R2RE/1003","Generic ADCP75"
 "CTD911","L221/TOOL0058","Sea-Bird SBE 911plus CTD"
-"Echosounder12"," R2RE/9038","Generic 12Khz echosounder"
+"Echosounder12","R2RE/9038","Generic 12Khz echosounder"
 "Echosounder3.5","R2RE/9039","Generic 3.5Khz echosounder"
 "Other","R2RE/1024","Instrument Details Specified Elsewhere"
 "Ship","R2RE/1027","Academic Research Vessel"
