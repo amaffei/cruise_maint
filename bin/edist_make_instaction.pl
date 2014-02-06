@@ -29,8 +29,8 @@
      blank_is_undef        => 0,
      empty_is_undef        => 0,
      verbatim              => 0,
-     auto_diag             => 0,
-     diag_verbose          => 0,
+     auto_diag             => 1,
+     diag_verbose          => 1,
      });
 
   my $fh = Tie::Handle::CSV->new ($file,
@@ -41,7 +41,7 @@
   # print instruments.csv rows
   # "R2RE/1034","NOAA SCS data acquisition system","R2RE/9010","data acquisition system","Acqsys","NOAA SCS data acquisition system description goes here"
   while (my $csv_line = <$fh>) {
-      if ($csv_line->{Edist} eq "Yes" && $csv_line->{EcfmDefActions} ne "") {
+      if ((index($csv_line->{EdistStatus}, "OK") != -1) && $csv_line->{EcfmDefActions} ne "") {
 	  # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
           print "\"" . $csv_line->{EcfmDefName} . "\",\"" . $csv_line->{EcfmDefActions} . "\"\n";
       }

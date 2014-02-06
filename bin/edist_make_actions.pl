@@ -30,8 +30,8 @@
      blank_is_undef        => 0,
      empty_is_undef        => 0,
      verbatim              => 0,
-     auto_diag             => 0,
-     diag_verbose          => 0,
+     auto_diag             => 1,
+     diag_verbose          => 1,
      });
 
   my $fh = Tie::Handle::CSV->new ($file,
@@ -48,10 +48,8 @@
   # "abort","R2RE/1035","Aborted device operations"
   #
   while (my $csv_line = <$fh>) {
-      # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
       if ($csv_line->{TermType} eq "ActionTerm") {
-	  # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
-          print "\"" . $csv_line->{EntryTerm} . "\",\"" .$csv_line->{EntryKey} . "\",\"" . $csv_line->{TermDescription} . "\"\n";
+          print "\"" . $csv_line->{entryterm} . "\",\"" .$csv_line->{entrykey} . "\",\"" . $csv_line->{entrytermdef} . "\"\n";
       }
       }
 
