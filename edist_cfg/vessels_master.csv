@@ -2,210 +2,210 @@ VesselID,PreferredName,VocabID,VocabName,Edist,Modified
 ae,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
 ae,ADCP75,L22/TOOL0362,Teledyne RDI Ocean Surveyor 75kHz vessel-mounted ADCP,Yes,1/24/2014
 ae,Fluorometer,L22/TOOL0393,Turner 10-AU chlorophyll field fluorometer,Yes,1/24/2014
-ae,MeteorologicalSensor,R2RE/1015,Generic Meteorological Sensor,Yes,1/24/2014
-ae,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+ae,MeteorologicalSensor,R2RE/1015,Meteorological Sensor,Yes,1/24/2014
+ae,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 ae,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 ae,Thermosalinograph SBE21,R2RE/1056,Sea-Bird SBE21 SeaCat thermosalinograph,Yes,1/24/2014
-ae,Echosounder3.5,R2RE/9039,generic 3.5kHz echosounder,Yes,1/24/2014
-ae,Echosounder12,R2RE/9042,Kongsberg (Simrad) ES60 single beam echosounder,Yes,1/24/2014
+ae,Echosounder3.5,R2RE/9039,3.5kHz echosounder,Yes,1/24/2014
+ae,Echosounder12,R2RE/9090,Kongsberg (Simrad) ES60 split beam echosounder,Yes,1/24/2014
 at,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
 at,Thermosalinograph SBE45,L22/TOOL0190,Sea-Bird SBE45 MicroTSG thermosalinograph,Yes,1/24/2014
-at,ADCP75,R2RE/1003,Generic ADCP75,Yes,1/24/2014
-at,Multibeam,R2RE/1008,Kongsberg (Simrad) EM 122 multibeam echosounder,Yes,1/24/2014
-at,MeteorologicalSensor,R2RE/1015,Generic Meteorological Sensor,Yes,1/24/2014
-at,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+at,ADCP75,R2RE/1003,ADCP75,Yes,1/24/2014
+at,Multibeam,R2RE/1008,Kongsberg (Simrad) EM 122 multibeam echosounder - DEPRICATED,Yes,1/24/2014
+at,MeteorologicalSensor,R2RE/1015,Meteorological Sensor,Yes,1/24/2014
+at,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 at,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
-at,XBT,R2RE/1031,Generic XBT,Yes,1/24/2014
-at,Fluorometer,R2RE/9018,fluorometer r2r_devtype,Yes,1/24/2014
-at,Echosounder12,R2RE/9038,generic 12kHz echosounder,Yes,1/24/2014
-at,Echosounder3.5,R2RE/9039,generic 3.5kHz echosounder,Yes,1/24/2014
+at,XBT,R2RE/1031,XBT,Yes,1/24/2014
+at,Fluorometer,R2RE/9018,fluorometer,Yes,1/24/2014
+at,Echosounder12,R2RE/9038,12kHz echosounder,Yes,1/24/2014
+at,Echosounder3.5,R2RE/9039,3.5kHz echosounder,Yes,1/24/2014
 bh,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-bh,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+bh,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 bh,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 c,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-c,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+c,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 c,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 cb,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-cb,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+cb,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 cb,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 ch,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-ch,ADCP150,R2RE/1004,Generic ADCP150,Yes,1/24/2014
-ch,MeteorologicalSensor,R2RE/1015,Generic Meteorological Sensor,Yes,1/24/2014
-ch,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+ch,ADCP150,R2RE/1004,ADCP150,Yes,1/24/2014
+ch,MeteorologicalSensor,R2RE/1015,Meteorological Sensor,Yes,1/24/2014
+ch,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 ch,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
-ch,XBT,R2RE/1031,Generic XBT,Yes,1/24/2014
+ch,XBT,R2RE/1031,XBT,Yes,1/24/2014
 ch,Thermosalinograph SBE21,R2RE/1056,Sea-Bird SBE21 SeaCat thermosalinograph,Yes,1/24/2014
-ch,Fluorometer,R2RE/9018,fluorometer r2r_devtype,Yes,1/24/2014
-ch,Echosounder12,R2RE/9038,generic 12kHz echosounder,Yes,1/24/2014
-ch,Echosounder3.5,R2RE/9039,generic 3.5kHz echosounder,Yes,1/24/2014
+ch,Fluorometer,R2RE/9018,fluorometer,Yes,1/24/2014
+ch,Echosounder12,R2RE/9038,12kHz echosounder,Yes,1/24/2014
+ch,Echosounder3.5,R2RE/9039,3.5kHz echosounder,Yes,1/24/2014
 en,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
 en,Thermosalinograph SBE45,L22/TOOL0190,Sea-Bird SBE45 MicroTSG thermosalinograph,Yes,1/24/2014
-en,ADCP75,R2RE/1003,Generic ADCP75,Yes,1/24/2014
-en,ADCP300,R2RE/1005,Generic ADCP300,Yes,1/24/2014
-en,MeteorologicalSensor,R2RE/1015,Generic Meteorological Sensor,Yes,1/24/2014
-en,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+en,ADCP75,R2RE/1003,ADCP75,Yes,1/24/2014
+en,ADCP300,R2RE/1005,ADCP300,Yes,1/24/2014
+en,MeteorologicalSensor,R2RE/1015,Meteorological Sensor,Yes,1/24/2014
+en,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 en,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
-en,XBT,R2RE/1031,Generic XBT,Yes,1/24/2014
-en,Fluorometer,R2RE/9018,fluorometer r2r_devtype,Yes,1/24/2014
-en,Echosounder12,R2RE/9038,generic 12kHz echosounder,Yes,1/24/2014
-en,Echosounder3.5,R2RE/9039,generic 3.5kHz echosounder,Yes,1/24/2014
+en,XBT,R2RE/1031,XBT,Yes,1/24/2014
+en,Fluorometer,R2RE/9018,fluorometer,Yes,1/24/2014
+en,Echosounder12,R2RE/9038,12kHz echosounder,Yes,1/24/2014
+en,Echosounder3.5,R2RE/9039,3.5kHz echosounder,Yes,1/24/2014
 ew,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-ew,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+ew,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 ew,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 hly,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-hly,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+hly,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 hly,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 hrs,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-hrs,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+hrs,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 hrs,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 hx,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-hx,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+hx,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 hx,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 km,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-km,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+km,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 km,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 kn,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
 kn,Thermosalinograph SBE45,L22/TOOL0190,Sea-Bird SBE45 MicroTSG thermosalinograph,Yes,1/24/2014
-kn,ADCP75,R2RE/1003,Generic ADCP75,Yes,1/24/2014
-kn,ADCP300,R2RE/1005,Generic ADCP300,Yes,1/24/2014
-kn,MeteorologicalSensor,R2RE/1015,Generic Meteorological Sensor,Yes,1/24/2014
+kn,ADCP75,R2RE/1003,ADCP75,Yes,1/24/2014
+kn,ADCP300,R2RE/1005,ADCP300,Yes,1/24/2014
+kn,MeteorologicalSensor,R2RE/1015,Meteorological Sensor,Yes,1/24/2014
 kn,Multibeam,R2RE/1016,Sea Beam multibeam echosounder,Yes,1/24/2014
-kn,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+kn,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 kn,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
-kn,XBT,R2RE/1031,Generic XBT,Yes,1/24/2014
-kn,Fluorometer,R2RE/9018,fluorometer r2r_devtype,Yes,1/24/2014
-kn,Echosounder12,R2RE/9038,generic 12kHz echosounder,Yes,1/24/2014
-kn,Echosounder3.5,R2RE/9039,generic 3.5kHz echosounder,Yes,1/24/2014
+kn,XBT,R2RE/1031,XBT,Yes,1/24/2014
+kn,Fluorometer,R2RE/9018,fluorometer,Yes,1/24/2014
+kn,Echosounder12,R2RE/9038,12kHz echosounder,Yes,1/24/2014
+kn,Echosounder3.5,R2RE/9039,3.5kHz echosounder,Yes,1/24/2014
 kok,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-kok,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+kok,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 kok,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 lmg,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-lmg,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+lmg,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 lmg,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 mgl,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-mgl,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+mgl,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 mgl,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 mv,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
 mv,Thermosalinograph SBE45,L22/TOOL0190,Sea-Bird SBE45 MicroTSG thermosalinograph,Yes,1/24/2014
 mv,ADCP75,L22/TOOL0362,Teledyne RDI Ocean Surveyor 75kHz vessel-mounted ADCP,Yes,1/24/2014
 mv,SeaSPY magnetometer,L22/TOOL0474,Marine Magnetics SeaSPY Marine Magnetometer,Yes,1/24/2014
-mv,ADCP150,R2RE/1004,Generic ADCP150,Yes,1/24/2014
-mv,Multibeam,R2RE/1008,Kongsberg (Simrad) EM 122 multibeam echosounder,Yes,1/24/2014
-mv,MeteorologicalSensor,R2RE/1015,Generic Meteorological Sensor,Yes,1/24/2014
-mv,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+mv,ADCP150,R2RE/1004,ADCP150,Yes,1/24/2014
+mv,Multibeam,R2RE/1008,Kongsberg (Simrad) EM 122 multibeam echosounder - DEPRICATED,Yes,1/24/2014
+mv,MeteorologicalSensor,R2RE/1015,Meteorological Sensor,Yes,1/24/2014
+mv,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 mv,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
-mv,Fluorometer,R2RE/9018,fluorometer r2r_devtype,Yes,1/24/2014
-mv,Echosounder12,R2RE/9038,generic 12kHz echosounder,Yes,1/24/2014
-mv,Echosounder3.5,R2RE/9039,generic 3.5kHz echosounder,Yes,1/24/2014
+mv,Fluorometer,R2RE/9018,fluorometer,Yes,1/24/2014
+mv,Echosounder12,R2RE/9038,12kHz echosounder,Yes,1/24/2014
+mv,Echosounder3.5,R2RE/9039,3.5kHz echosounder,Yes,1/24/2014
 mv,XBT,R2RE/9040,Lockheed Martin Sippican XBT Fast Deep probe,Yes,1/24/2014
 mv,Gravimeter,R2RE/9041,Bell Aerospace BGM-3 gravity meter,Yes,1/24/2014
 mw,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-mw,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+mw,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 mw,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 nbp,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-nbp,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+nbp,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 nbp,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 nh,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-nh,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+nh,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 nh,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 oc,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
 oc,Thermosalinograph SBE45,L22/TOOL0190,Sea-Bird SBE45 MicroTSG thermosalinograph,Yes,1/24/2014
-oc,ADCP150,R2RE/1004,Generic ADCP150,Yes,1/24/2014
-oc,MeteorologicalSensor,R2RE/1015,Generic Meteorological Sensor,Yes,1/24/2014
-oc,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+oc,ADCP150,R2RE/1004,ADCP150,Yes,1/24/2014
+oc,MeteorologicalSensor,R2RE/1015,Meteorological Sensor,Yes,1/24/2014
+oc,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 oc,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
-oc,XBT,R2RE/1031,Generic XBT,Yes,1/24/2014
-oc,Fluorometer,R2RE/9018,fluorometer r2r_devtype,Yes,1/24/2014
-oc,Echosounder12,R2RE/9038,generic 12kHz echosounder,Yes,1/24/2014
-oc,Echosounder3.5,R2RE/9039,generic 3.5kHz echosounder,Yes,1/24/2014
+oc,XBT,R2RE/1031,XBT,Yes,1/24/2014
+oc,Fluorometer,R2RE/9018,fluorometer,Yes,1/24/2014
+oc,Echosounder12,R2RE/9038,12kHz echosounder,Yes,1/24/2014
+oc,Echosounder3.5,R2RE/9039,3.5kHz echosounder,Yes,1/24/2014
 pe,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-pe,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+pe,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 pe,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 ps,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-ps,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+ps,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 ps,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 psea,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-psea,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+psea,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 psea,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 pstar,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-pstar,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+pstar,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 pstar,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
-qq,ADCP150,R2RE/1004,Generic ADCP150,Yes,1/24/2014
-qq,CTD911,L221/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-qq,Echosounder12,L221/TOOL0130,Simrad EA500 echosounder,Yes,1/24/2014
-qq,Echosounder3.5,L221/TOOLZZZ,unknown,Yes,1/24/2014
-qq,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+qq,ADCP150,R2RE/1004,ADCP150,Yes,1/24/2014
+qq,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
+qq,Echosounder12,L22/TOOL0130,Simrad EA500 echosounder,Yes,1/24/2014
+qq,Echosounder3.5,L22/TOOLZZZ,unknown,Yes,1/24/2014
+qq,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 qq,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
-qq,Thermosalinograph SBE45,L221/TOOL0190,Sea-Bird SBE45 MicroTSG thermosalinograph,Yes,1/24/2014
-qq,XBT,R2RE/1031,Generic XBT,Yes,1/24/2014
-qq,MeteorologicalSensor,R2RE/1015,Generic Meterological Sensor,Yes,1/24/2014
-qq,Fluorometer,R2RE/9018,fluorometer r2r_devtype,Yes,1/24/2014
+qq,Thermosalinograph SBE45,L22/TOOL0190,Sea-Bird SBE45 MicroTSG thermosalinograph,Yes,1/24/2014
+qq,XBT,R2RE/1031,XBT,Yes,1/24/2014
+qq,MeteorologicalSensor,R2RE/1015,Meteorological Sensor,Yes,1/24/2014
+qq,Fluorometer,R2RE/9018,fluorometer,Yes,1/24/2014
 rr,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-rr,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+rr,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 rr,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 s,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-s,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+s,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 s,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 sav,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-sav,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+sav,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 sav,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 sj,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-sj,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+sj,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 sj,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 sp,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-sp,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+sp,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 sp,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 sq,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 sq,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-sq,EM302,R2RE/1029,Kongsberg EM 302 multibeam echosounder,Yes,1/24/2014
+sq,EM302,R2RE/1029,Kongsberg (Simrad) EM 302 multibeam echosounder,Yes,1/24/2014
 sq,EM710,R2RE/9091,Kongsberg EM EM710 multibeam echosounder,Yes,1/24/2014
 sq,PS18,R2RE/9092,Kongsberg Topas PS18,Yes,1/24/2014
-sq,OS150,R2RE/9093,Teledyne RDI Ocean Surveyor 150kHz vessel-mounted ADCP,Yes,1/24/2014
+sq,OS150,R2RE/9093,Teledyne RDI Ocean Surveyor 150kHz vessel-mounted ADCP - DEPRICATED,Yes,1/24/2014
 sq,OS75,L22/TOOL0362,Teledyne RDI Ocean Surveyor 75kHz vessel-mounted ADCP,Yes,1/24/2014
-sq,Echosounder12,R2RE/9038,12 kHz echosounder of unknown make/model,Yes,1/24/2014
+sq,Echosounder12,R2RE/9038,12kHz echosounder,Yes,1/24/2014
 sq,EK60,R2RE/9094,Simrad Split beam EK60,Yes,1/24/2014
 sq,centerBoard,R2RE/9095,Acoustic Centerboard,Yes,1/24/2014
 sq,hydrophoneArray,R2RE/9096,Soundguard Hydrophone Array,Yes,1/24/2014
 sq,Gravimeter,R2RE/9041,Bell Aerospace BGM-3 gravity meter,Yes,1/24/2014
 sq,XBT,R2RE/1031,XBT,Yes,1/24/2014
-sq,PCO2,R2RE/9027,PC02,Yes,1/24/2014
+sq,PCO2,R2RE/9027,PCO2,Yes,1/24/2014
 sq,LDS,R2RE/9097,LDS Logger,Yes,1/24/2014
 sq,CNAV,R2RE/9098,CNAV GPS,Yes,1/24/2014
 sq,seapath,R2RE/9099,Seapath 320,Yes,1/24/2014
 sq,MOCNESS1,R2RE/1017,MOCNESS1,Yes,1/24/2014
 sq,Multicorer,R2RE/9100,MC800 multicorer,Yes,1/24/2014
-sq,winchCTD,R2RE/9101,CTD  Hydrographic Winch,Yes,1/24/2014
-sq,winchHydro,R2RE/9102,Hydrographic Winch,Yes,1/24/2014
+sq,winchCTD,R2RE/9101,Winch - CTD Hydrographic,Yes,1/24/2014
+sq,winchHydro,R2RE/9102,Winch - Hydrographic,Yes,1/24/2014
 sq,winchTrawl 680,R2RE/9103,Trawl Winch with 680 cable,Yes,1/24/2014
 sq,winchTrawl 9/16,R2RE/9104,Trawl Winch with 9/16 cable,Yes,1/24/2014
 ti,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-ti,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+ti,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 ti,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 tn,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
 tn,Thermosalinograph SBE45,L22/TOOL0190,Sea-Bird SBE45 MicroTSG thermosalinograph,Yes,1/24/2014
-tn,ADCP75,R2RE/1003,Generic ADCP75,Yes,1/24/2014
-tn,MeteorologicalSensor,R2RE/1015,Generic Meteorological Sensor,Yes,1/24/2014
-tn,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+tn,ADCP75,R2RE/1003,ADCP75,Yes,1/24/2014
+tn,MeteorologicalSensor,R2RE/1015,Meteorological Sensor,Yes,1/24/2014
+tn,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 tn,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
 tn,Multibeam,R2RE/1029,Kongsberg (Simrad) EM 302 multibeam echosounder,Yes,1/24/2014
-tn,XBT,R2RE/1031,Generic XBT,Yes,1/24/2014
-tn,Fluorometer,R2RE/9018,fluorometer r2r_devtype,Yes,1/24/2014
-tn,Echosounder12,R2RE/9038,generic 12kHz echosounder,Yes,1/24/2014
-tn,Echosounder3.5,R2RE/9039,generic 3.5kHz echosounder,Yes,1/24/2014
+tn,XBT,R2RE/1031,XBT,Yes,1/24/2014
+tn,Fluorometer,R2RE/9018,fluorometer,Yes,1/24/2014
+tn,Echosounder12,R2RE/9038,12kHz echosounder,Yes,1/24/2014
+tn,Echosounder3.5,R2RE/9039,3.5kHz echosounder,Yes,1/24/2014
 w,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-w,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+w,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 w,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
-wh,ADCP75,R2RE/1003,Generic ADCP75,Yes,1/24/2014
-wh,CTD911,L221/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-wh,Echosounder12,R2RE/9038,Generic 12Khz echosounder,Yes,1/24/2014
-wh,Echosounder3.5,R2RE/9039,Generic 3.5Khz echosounder,Yes,1/24/2014
-wh,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+wh,ADCP75,R2RE/1003,ADCP75,Yes,1/24/2014
+wh,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
+wh,Echosounder12,R2RE/9038,12kHz echosounder,Yes,1/24/2014
+wh,Echosounder3.5,R2RE/9039,3.5kHz echosounder,Yes,1/24/2014
+wh,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 wh,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
-wh,Thermosalinograph SBE45,L221/TOOL0190,Sea-Bird SBE45 MicroTSG thermosalinograph,Yes,1/24/2014
-wh,XBT,R2RE/1031,Generic XBT,Yes,1/24/2014
-wh,MeteorologicalSensor,R2RE/1015,Generic Meterological Sensor,Yes,1/24/2014
-wh,EM122,R2RE/1008,Kongsberg (Simrad) EM 122 multibeam echosounder,Yes,1/24/2014
-wh,Fluorometer,R2RE/9018,fluorometer r2r_devtype,Yes,1/24/2014
+wh,Thermosalinograph SBE45,L22/TOOL0190,Sea-Bird SBE45 MicroTSG thermosalinograph,Yes,1/24/2014
+wh,XBT,R2RE/1031,XBT,Yes,1/24/2014
+wh,MeteorologicalSensor,R2RE/1015,Meteorological Sensor,Yes,1/24/2014
+wh,EM122,R2RE/1008,Kongsberg (Simrad) EM 122 multibeam echosounder - DEPRICATED,Yes,1/24/2014
+wh,Fluorometer,R2RE/9018,fluorometer,Yes,1/24/2014
 ws,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/2014
-ws,Other,R2RE/1024,Instrument Details Specified Elsewhere,Yes,1/24/2014
+ws,Other,R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,Yes,1/24/2014
 ws,Ship,R2RE/1027,Academic Research Vessel,Yes,1/24/2014
