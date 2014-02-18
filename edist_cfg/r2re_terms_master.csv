@@ -59,7 +59,7 @@ R2RE/1058,MOCNESS,,MOCNESS is a Mlutiple Opening / Closing Net and Environmental
 R2RE/1059,pointSample,,Sample at single instant of time,1/24/2014,ActionTerm,,termPending,
 R2RE/1060,Bucket,,Bucket used to sample sea surface water; deployed and recovered by hand,1/28/2014,DeviceTerm,,termPending,
 R2RE/1061,Soular Box Corer,,Ocean Instruments box corer developed by Andy Soutar,2/4/2014,DeviceTerm,,,
-R2RE/1062,Ocean Bottom Seismometer - ARRA,,,2/4/2014,DeviceTerm,,,
+R2RE/1062,Ocean Bottom Seismometer - ARRA,,ocean bottom seismometer designed at WHOI funded by ARRA (American Recovery and Reinvestment Act),2/4/2014,DeviceTerm,,,
 R2RE/1063,Ocean Bottom Seismometer - Cascadia Lamont,,Lamont OBS used for Cascadia Initiative,2/4/2014,DeviceTerm,,,
 R2RE/1064,Diaphram Pump,,Pumps water on-board for experiments,2/4/2014,DeviceTerm,,,
 R2RE/1065,EK80 broadband acoustic system,,Simrad echosounder that can operate seven echo sounder frequencies simultaneously ranging from 18 to 710 kHz.,2/4/2014,DeviceTerm,,,
