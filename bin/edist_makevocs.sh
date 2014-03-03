@@ -27,13 +27,13 @@ rm $outputdir/vessels/*
 for file in activitytype organization person vessel
 do
     infourl=http://get.rvdata.us/services/voc/?id=$file
-    wget $infourl -O $outputdir/voc/$file.$version.tsv
+    wget $infourl -O $outputdir/voc/$file\_$version.tsv
 done
 
 # build instruments.csv and instaction.csv
 # NOTE: perl funniness below sorts all lines but header in a CSV
 #
-$bindir/edist_make_instruments.pl  > $outputdir/voc/instruments.$version.csv
+$bindir/edist_make_instruments.pl  > $outputdir/voc/instruments\_$version.csv
 $bindir/edist_make_actions.pl | perl -e 'print scalar <>, sort <>;' > $outputdir/voc/actions\_$version.csv
 #
 # make instactionmap.csv
@@ -46,8 +46,8 @@ $bindir/edist_make_instaction.pl | perl -e 'print scalar <>, sort <>;' | uniq >>
 #
 for i in ae at bh c cb ch en ew hly hrs hx km kn kok lmg mgl mv mw nbp nh oc pe ps psea pstar qq rr s sav sj sp sq ti tn w wh ws 
 do
-    echo "\"DefaultInstrumentTerm\",\"DeviceID\",\"DeviceTerm\"" > $outputdir/vessels/$i\_instruments.$version.csv
-    $bindir/edist_list_vesselinst.pl $i >> $outputdir/vessels/$i\_instruments.$version.csv
+    echo "\"DefaultInstrumentTerm\",\"DeviceID\",\"DeviceTerm\"" > $outputdir/vessels/$i\_instruments\_$version.csv
+    $bindir/edist_list_vesselinst.pl $i >> $outputdir/vessels/$i\_instruments\_$version.csv
 done
 
 #
