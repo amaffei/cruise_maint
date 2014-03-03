@@ -1,6 +1,6 @@
 #!/bin/bash
 # edist_getmasters.sh
-topdir=~drumbeat/git/cruise_maint
+topdir=/shipdata/cruise_maint
 configdir=$topdir/edist_cfg
 vocabdir=$topdir/vocabs
 bindir=$topdir/bin
