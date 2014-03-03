@@ -1,6 +1,6 @@
 #!/bin/bash
 # edist_getmasters.sh
-topdir=/shipdata/cruise_maint
+topdir=~r2root/cruise_maint
 configdir=$topdir/edist_cfg
 vocabdir=$topdir/vocabs
 bindir=$topdir/bin
