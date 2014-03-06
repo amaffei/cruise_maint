@@ -1,5 +1,9 @@
 #!/bin/bash
 # edist_getmasters.sh
+# TODO
+# ----
+# Make sure that no N/As appear in the csvs grabbed from Google
+#
 topdir=~drumbeat/git/cruise_maint
 configdir=$topdir/edist_cfg
 vocabdir=$topdir/vocabs

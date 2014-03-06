@@ -21,7 +21,7 @@ R2RE/1020,mooring,,"A collection of devices, connected to a wire and temporarily
 R2RE/1021,compass,,,1/23/2014,DeviceCatTerm,,tbd,
 R2RE/1022,Bird Observer,,Humans who estimate parameter(s) through observation of birds.,1/23/2014,DeviceTerm,,tbd,
 R2RE/1023,Marine Mammal Observer,,Humans who estimate parameter(s) through observation of marine mammals.,1/23/2014,DeviceTerm,,tbd,
-R2RE/1024,Instrument Details Specified Elsewhere - DEPRICATED,,USE TERM R2RE/1057 INSTEAD,1/23/2014,DeviceTerm,L22:TOOLZZZ,tbd,L22:TOOLZZZ - unknown
+R2RE/1024,Other,,Instrument Details Specified Elsewhere,3/5/2014,DeviceTerm,L22:TOOLZZZ,tbd,L22:TOOLZZZ - unknown
 R2RE/1025,underwater vehicle,,,1/23/2014,DeviceCatTerm,,tbd,
 R2RE/1026,Remus Authomomous Underwater Vehicle,,Remus make AUV of unknown model,1/23/2014,DeviceTerm,,tbd,
 R2RE/1027,Academic Research Vessel,,Research vessel carrying academic researchers. Typically a UNOLS vessel but may also be operated privately.,1/23/2014,DeviceTerm,,tbd,
