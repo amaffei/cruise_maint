@@ -1,6 +1,6 @@
 #!/bin/bash
 # edist_make_vocs.sh <cruiseid>
-topdir=~drumbeat/git/cruise_maint
+topdir=..
 configdir=$topdir/edist_cfg
 vocabdir=$topdir/vocabs
 bindir=$topdir/bin

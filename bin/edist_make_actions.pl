@@ -1,4 +1,4 @@
-#!/Users/drumbeat/perl5/perlbrew/perls/perl-5.18.2/bin/perl
+#!/usr/bin/perl
 
   use strict;
   use warnings;
@@ -10,7 +10,7 @@
 # R2RE/1032,WHOI Athena data acquisition system,,DeviceTerm,,tbd,,1/23/14
 # R2RE/1037,cruiseStart,Research cruise started,ActionTerm,,tbd,,1/23/14
 #
-  my $file = "/Users/drumbeat/git/cruise_maint/edist_cfg/r2re_terms_master.csv";
+  my $file = "../edist_cfg/r2re_terms_master.csv";
   my $csv_parser = Text::CSV_XS->new( { 
      quote_char            => '"',
      escape_char           => '"',

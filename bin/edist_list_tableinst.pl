@@ -1,4 +1,4 @@
-#!/Users/drumbeat/perl5/perlbrew/perls/perl-5.18.2/bin/perl
+#!/usr/bin/perl -w
 # TODO
 # - Add equivalent of following sort command ...
 #   sort -f -k1.3
@@ -7,7 +7,8 @@
   use warnings;
   use Tie::Handle::CSV;
 
-  my $file = "/Users/drumbeat/git/cruise_maint/edist_cfg/instruments_master.csv";
+#VocabID,VocabName,VocabDesc,EcfmDesc,EcfmDefName,EcfmCategory,EcfmDefActions,EdistStatus,ModifiedDate,Used?,TermUri
+  my $file = "..//edist_cfg/instruments_master.csv";
   my $csv_parser = Text::CSV_XS->new( { 
      quote_char            => '"',
      escape_char           => '"',
@@ -49,7 +50,7 @@
           # print "|" . $csv_line->{EcfmCategory} . "|" . $csv_line->{VocabName} . " _(" . $csv_line->{VocabID} . ")_|" . $csv_line->{EcfmDefName} . "|\n";
           # print "| " . $csv_line->{EcfmCategory} . "|" . $csv_line->{VocabName} . "|" . $csv_line->{EcfmDefName} . "|\n";
       # }
-if ($csv_line->{Edist} eq "Yes") {
+if (index($csv_line->{EdistStatus}, "OK") != -1) {
           # print "|+" . $csv_line->{EcfmCategory} . "+|+" . $csv_line->{VocabName} . "+|+" . $csv_line->{EcfmDefName} . "+|\n";
           # print "|+" . $csv_line->{EcfmCategory} . "+|+" . $csv_line->{VocabName} . "+|+" . $csv_line->{EcfmDefName} . "+|+" . $csv_line->{EcfmDefActions} . "+|\n";
           print "| " . $csv_line->{EcfmCategory} . " | " . $csv_line->{VocabName} . " | " . $csv_line->{EcfmDefName} . " | " . $csv_line->{EcfmDefActions} . " |\n";

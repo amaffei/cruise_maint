@@ -1,11 +1,11 @@
-#!/Users/drumbeat/perl5/perlbrew/perls/perl-5.18.2/bin/perl -w
+#!/usr/bin/perl -w
 BEGIN { $Carp::Verbose = 1 }
 
   use strict;
   use warnings;
   use Tie::Handle::CSV;
 
-# my $file = "/Users/drumbeat/git/cruise_maint/edist_cfg/instruments_master.csv";
+# my $file = "../edist_cfg/instruments_master.csv";
   my $file = $ARGV[$1];
   my $csv_parser = Text::CSV_XS->new( { 
      quote_char            => '"',

@@ -6,7 +6,8 @@
 # - need to look into updating it to properly parse older $1_elogd.cfgs
 # - do error processing
 #
-topcruisedir=~drumbeat/git/cruise_maint/cruises
+# !!! FOR NOW THIS SCRIPT MUST BE RUN FROM THE BIN DIRECTORY IT SITS IN !!!
+topcruisedir=../cruises
 cruisedir=$topcruisedir/$1
 case "$2" in 
   metadata)
