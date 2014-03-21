@@ -4,7 +4,7 @@
 # ----
 # Make sure that no N/As appear in the csvs grabbed from Google
 #
-topdir=~drumbeat/git/cruise_maint
+topdir=~r2root/cruise_maint
 configdir=$topdir/edist_cfg
 vocabdir=$topdir/vocabs
 bindir=$topdir/bin
