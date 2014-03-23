@@ -3,6 +3,7 @@
 "deploy","R2RE/1038","Deploy device/vehicle"
 "end","R2RE/1039","End device/vehicle ops"
 "endCruise","R2RE/1037","Research cruise started"
+"endLine","R2RE/1103",""
 "endSafetydrill","R2RE/1040","Safety drill ended"
 "faultGPS","R2RE/1041","GPS fault occurred"
 "faultGyro","R2RE/1042","Gyro fault occurred"

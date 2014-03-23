@@ -39,7 +39,10 @@ $bindir/edist_make_actions.pl | perl -e 'print scalar <>, sort <>;' > $outputdir
 # make instactionmap.csv
 #
 echo "\"EventTerm\",\"DefaultActionTerms\"" > $outputdir/voc/instactionmap\_$version.csv
-echo "\"ALL\",\"deploy;recover;service;other;startSample;stopSample;maxDepth;abort;startLine;endLine;abortLine;start;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release\"" >> $outputdir/voc/instactionmap\_$version.csv
+#echo "\"ALL\",\"deploy;recover;service;other;startSample;stopSample;maxDepth;abort;startLine;endLine;abortLine;start;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release\"" >> $outputdir/voc/instactionmap\_$version.csv
+echo "\"ALL\",\"deploy;recover;service;other;startSample;stopSample;pointSample;maxDepth;abort;startLine;endLine;abortLine;start;stop;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release\"" >> $outputdir/voc/instactionmap\_$version.csv
+
+
 $bindir/edist_make_instaction.pl | perl -e 'print scalar <>, sort <>;' | uniq >> $outputdir/voc/instactionmap\_$version.csv
 #
 # make vessel instrument files

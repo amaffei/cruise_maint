@@ -1,5 +1,5 @@
 "EventTerm","DefaultActionTerms"
-"ALL","deploy;recover;service;other;startSample;stopSample;maxDepth;abort;startLine;endLine;abortLine;start;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release"
+"ALL","deploy;recover;service;other;startSample;stopSample;pointSample;maxDepth;abort;startLine;endLine;abortLine;start;stop;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release"
 "ACM","deploy;recover;surveyedPosition;other"
 "ADCP","start;stop;service;other"
 "ADCP150","start;stop;service;other"
