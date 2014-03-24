@@ -10,6 +10,7 @@
 #
 # TODO:
 # - Automate creation of "ALL" instrument rather than fake it below
+# - add headers and make rows unique here rather than depend on calling script to do so
 
   use strict;
   use warnings;
@@ -50,8 +51,7 @@
   #
   # print ALL instrument out
   #
-  print
-"\"ALL\",\"deploy;recover;service;other;startSample;stopSample;pointSample;maxDepth;abort;startLine;endLine;abortLine;start;stop;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release\""
+  print "\"ALL\",\"deploy;recover;service;other;startSample;stopSample;pointSample;maxDepth;abort;startLine;endLine;abortLine;start;stop;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release\"\n";
   #
   # print instaction.csv rows
   #
