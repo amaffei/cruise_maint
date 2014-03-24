@@ -4,6 +4,12 @@
 # Brief Description:
 # Extracts info from the master instruments file in order to output a TSV in proper
 # format for instaction tsv file
+#
+# Arguments:
+# None
+#
+# TODO:
+# - Automate creation of "ALL" instrument rather than fake it below
 
   use strict;
   use warnings;
@@ -41,7 +47,11 @@
   my $fh = Tie::Handle::CSV->new ($file,
 				  header => 1,
 				  csv_parser => $csv_parser );
-
+  #
+  # print ALL instrument out
+  #
+  print
+"\"ALL\",\"deploy;recover;service;other;startSample;stopSample;pointSample;maxDepth;abort;startLine;endLine;abortLine;start;stop;end;faultGPS;faultGyro;startCruise;endCruise;startTransect;endTransect;startStation;endStation;startSafetydrill;endSafetydrill;maxextensionWire;maxspeedWire;release\""
   #
   # print instaction.csv rows
   #
