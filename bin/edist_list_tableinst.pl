@@ -1,13 +1,19 @@
-#!/Users/drumbeat/perl5/perlbrew/perls/perl-5.18.2/bin/perl
-# TODO
-# - Add equivalent of following sort command ...
-#   sort -f -k1.3
+#!/usr/bin/perl -w
+# edist_list_tableinst.pl
+#
+# Brief Description:
+# Print a table of instruments enabled for use with Edist in Redmine table format
+#
+# Arguments:
+# None - it assumes you are using the instrument file in ../edist_cfg/instruments_master.csv
+#
 
   use strict;
   use warnings;
   use Tie::Handle::CSV;
 
-  my $file = "/Users/drumbeat/git/cruise_maint/edist_cfg/instruments_master.csv";
+#VocabID,VocabName,VocabDesc,EcfmDesc,EcfmDefName,EcfmCategory,EcfmDefActions,EdistStatus,ModifiedDate,Used?,TermUri
+  my $file = "../edist_cfg/instruments_master.csv";
   my $csv_parser = Text::CSV_XS->new( { 
      quote_char            => '"',
      escape_char           => '"',
@@ -44,14 +50,8 @@
   # print instruments.csv rows
   # "R2RE/1034","NOAA SCS data acquisition system","R2RE/9010","data acquisition system","Acqsys","NOAA SCS data acquisition system description goes here"
   while (my $csv_line = <$fh>) {
-      # if ($csv_line->{Edist} eq "Maybe") {
-          # print "|" . $csv_line->{EcfmCategory} . "|" . $csv_line->{VocabName} . "|" . $csv_line->{EcfmDefName} . "|" . $csv_line->{EcfmDefActions} . "|\n";
-          # print "|" . $csv_line->{EcfmCategory} . "|" . $csv_line->{VocabName} . " _(" . $csv_line->{VocabID} . ")_|" . $csv_line->{EcfmDefName} . "|\n";
-          # print "| " . $csv_line->{EcfmCategory} . "|" . $csv_line->{VocabName} . "|" . $csv_line->{EcfmDefName} . "|\n";
-      # }
-if ($csv_line->{Edist} eq "Yes") {
-          # print "|+" . $csv_line->{EcfmCategory} . "+|+" . $csv_line->{VocabName} . "+|+" . $csv_line->{EcfmDefName} . "+|\n";
-          # print "|+" . $csv_line->{EcfmCategory} . "+|+" . $csv_line->{VocabName} . "+|+" . $csv_line->{EcfmDefName} . "+|+" . $csv_line->{EcfmDefActions} . "+|\n";
+
+if (index($csv_line->{EdistStatus}, "OK") != -1) {
           print "| " . $csv_line->{EcfmCategory} . " | " . $csv_line->{VocabName} . " | " . $csv_line->{EcfmDefName} . " | " . $csv_line->{EcfmDefActions} . " |\n";
       }
       }

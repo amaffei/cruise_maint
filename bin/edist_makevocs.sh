@@ -13,7 +13,7 @@
 # - Add logic to only make the "ALL" instrument from actions found in instruments included in edist
 #   and the r2re_terms_master.csv
 #
-topdir=~drumbeat/git/cruise_maint
+topdir=..
 configdir=$topdir/edist_cfg
 vocabdir=$topdir/vocabs
 bindir=$topdir/bin

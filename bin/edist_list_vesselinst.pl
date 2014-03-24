@@ -1,5 +1,17 @@
-#!/Users/drumbeat/perl5/perlbrew/perls/perl-5.18.2/bin/perl
+#!/usr/bin/perl -w
+# edist_list_vesselinst.pl <VesselID>
 #
+# Brief Description:
+# Reads the vessel master spreadsheet and generates an individual vessel default
+# instrument file
+#
+# Arguments:
+# <VesselID> - typically a 2-3 character identifier for a unols vessel matching
+#              vesselID column in spreadsheet
+#
+# NOTE:
+# Assumes vessel master file is in ../edist_cfg/vessels_master.csv
+# 
 # TODO
 # - Make sure VocabID and VocabName match in the instruments files
 
@@ -12,7 +24,7 @@
 # VesselID,PreferredName,VocabID,VocabName,Edist,Modified
 # ae,CTD911,L22/TOOL0058,Sea-Bird SBE 911plus CTD,Yes,1/24/14
 #
-  my $file = "/Users/drumbeat/git/cruise_maint/edist_cfg/vessels_master.csv";
+  my $file = "../edist_cfg/vessels_master.csv";
   my $csv_parser = Text::CSV_XS->new( { 
      quote_char            => '"',
      escape_char           => '"',
@@ -44,9 +56,7 @@
   # print instruments.csv rows
   # "R2RE/1034","NOAA SCS data acquisition system","R2RE/9010","data acquisition system","Acqsys","NOAA SCS data acquisition system description goes here"
   while (my $csv_line = <$fh>) {
-      # print $csv_line->{VocabID} . ":\t" . $csv_line->{VocabName} . "\n";
-      if ($csv_line->{Edist} eq "Yes" && $csv_line->{VesselID} eq $ARGV[0]) {
-	  # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
+      if ((index($csv_line->{Edist}, "Yes") != -1) && $csv_line->{VesselID} eq $ARGV[0]) {
           print "\"" . $csv_line->{PreferredName} . "\",\"" . $csv_line->{VocabID} . "\",\"" . $csv_line->{VocabName} . "\"\n";
       }
       }

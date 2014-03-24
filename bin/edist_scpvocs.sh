@@ -8,7 +8,7 @@
 # Arguments:
 # Must provide single argument in form username@hostname
 #
-topdir=~drumbeat/git/cruise_maint
+topdir=..
 testdir=$topdir/edist_files
 #
 if [ "$1" == "" ]; then

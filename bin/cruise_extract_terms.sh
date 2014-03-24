@@ -1,12 +1,23 @@
 #!/bin/bash
-# <command> <cruiseid> <term-type>
+# cruise_extract_terms.sh <cruiseid> <termtype>
+#
+# Brief Description:
+# Extracts metadata, instruments, or persons from config files used during actual cruises
+#
+# Arguments:
+# - <cruiseid> must be a cruise found in cruises subdirectory
+# - <termtype> must be the type of term you wish to extract
+#
+# NOTE:
 # this script will only work for newer $1_elogd.cfgs 
-# TODO
-# ====
+#
+# TODO:
 # - need to look into updating it to properly parse older $1_elogd.cfgs
 # - do error processing
 #
-topcruisedir=~drumbeat/git/cruise_maint/cruises
+# !!! FOR NOW THIS SCRIPT MUST BE RUN FROM THE BIN DIRECTORY IT SITS IN !!!
+topcruisedir=../cruises
+
 cruisedir=$topcruisedir/$1
 case "$2" in 
   metadata)

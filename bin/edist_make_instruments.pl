@@ -1,10 +1,15 @@
-#!/Users/drumbeat/perl5/perlbrew/perls/perl-5.18.2/bin/perl
+#!/usr/bin/perl -w
+# edist_make_instruments.pl 
+#
+# Brief Description:
+# reads instrument master file, extracts instruments destined to be used in the R2R
+# eventlogger app and outputs a CSV appropriate for instruments.csv
 
   use strict;
   use warnings;
   use Tie::Handle::CSV;
 
-  my $file = "/Users/drumbeat/git/cruise_maint/edist_cfg/instruments_master.csv";
+  my $file = "../edist_cfg/instruments_master.csv";
   my $csv_parser = Text::CSV_XS->new( { 
      quote_char            => '"',
      escape_char           => '"',
@@ -42,9 +47,7 @@
   # "R2RE/1034","NOAA SCS data acquisition system","R2RE/9010","data acquisition system","Acqsys","NOAA SCS data acquisition system description goes here"
   while (my $csv_line = <$fh>) {
       if (index($csv_line->{EdistStatus}, "OK") != -1) {
-	  # print $csv_line->{EcfmID} . ":\t" . $csv_line->{EcfmName} . "\n";
           print "\"" . $csv_line->{VocabID} . "\",\"" . $csv_line->{VocabName} . "\",\"" . $csv_line->{EcfmDefActions} . "\",\"" . $csv_line->{EcfmCategory} . "\",\"" . $csv_line->{EcfmDefName} . "\",\"" . $csv_line->{EcfmDesc} . "\"\n";
-          # print "\"" . $csv_line->{VocabID} . "\",\"" . $csv_line->{EcfmCategory} . "\:" . $csv_line->{VocabName} . "\",\"" . $csv_line->{EcfmDefActions} . "\",\"" . $csv_line->{EcfmCategory} . "\",\"" . $csv_line->{EcfmDefName} . "\",\"" . $csv_line->{EcfmDesc} . "\"\n";
       }
       }
 

@@ -1,11 +1,25 @@
-#!/Users/drumbeat/perl5/perlbrew/perls/perl-5.18.2/bin/perl -w
+#!/usr/bin/perl -w
+# edist_list_csvfile.pl <instrument_master_list>
+# 
+# Brief Description:
+# Given the location of the instruments master list as a first argument, this routine
+# creates a csvfile including only those instruments ok'd for use in the R2R eventlogger
+# with only those fields the eventlogger employs.
+#
+# Arguments:
+# - <instrument_master_list> - usually is ../edist_cfg/instruments_master.csv
+#
+# TODO
+# - error handling. Note use of autodiag below to detect problems w input CSV
+#   need to find better way to catch errors and report on them.
+
 BEGIN { $Carp::Verbose = 1 }
 
   use strict;
   use warnings;
   use Tie::Handle::CSV;
 
-# my $file = "/Users/drumbeat/git/cruise_maint/edist_cfg/instruments_master.csv";
+# my $file = "../edist_cfg/instruments_master.csv";
   my $file = $ARGV[$1];
   my $csv_parser = Text::CSV_XS->new( { 
      quote_char            => '"',
