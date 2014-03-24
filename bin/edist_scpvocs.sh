@@ -1,11 +1,15 @@
 #!/bin/bash
-# edist_make_vocs.sh <cruiseid>
+# edist_scpvocs.sh r2root@<hostname>
+#
+# Brief Description:
+# copies vocabulary files to the current R2R eventlogger installation
+# on <hostname>
+#
+# Arguments:
+# Must provide single argument in form username@hostname
+#
 topdir=~drumbeat/git/cruise_maint
-configdir=$topdir/edist_cfg
-vocabdir=$topdir/vocabs
-bindir=$topdir/bin
-testdir=$topdir/edist_test
-outputdir=$topdir/edist_test
+testdir=$topdir/edist_files
 #
 if [ "$1" == "" ]; then
 echo "Need to incude a host specifier for scp command like username@hostname.whoi.edu"

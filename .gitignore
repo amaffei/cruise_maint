@@ -2,5 +2,5 @@
 bin/tmp/*
 edist_cfg/tmp/*
 #cruises/*
-edist_test/voc/*
-edist_test/vessels/*
+edist_files/voc/*.csv
+edist_test/vessels/*_instruments_.*\.csv

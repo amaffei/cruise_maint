@@ -1,26 +1,36 @@
 #!/bin/bash
-# edist_make_vocs.sh [test]
-# providing the argument "test" creates files in the edist_test directory, othwewise in edist_files
-# TODO
-# - Add logic to only make actions.csv list that contains actions found in instruments included in edist. No more, no less
+# edist_makevocs.sh [test]
+#
+# Brief Description:
+# Grabs vocabularies from rvdata.us and runs local scripts to create all vocabs necc for the
+# R2R eventlogger. Then places all of these in ../edist_files/{voc,vessels]
+#
+# Arguments:
+# Providing the argument "test" uses "test" as the version and incorporates it into
+# the resulting filenames (instead of using todays date as the version)
+#
+# TODO:
+# - Add logic to only make the "ALL" instrument from actions found in instruments included in edist
+#   and the r2re_terms_master.csv
+#
 topdir=~drumbeat/git/cruise_maint
 configdir=$topdir/edist_cfg
 vocabdir=$topdir/vocabs
 bindir=$topdir/bin
+outputdir=$topdir/edist_files
 
 if [ "$1" == "test" ]; then
-  outputdir=$topdir/edist_test
-  version=andytest
+  version=test
 else
-  outputdir=$topdir/edist_files
   version=`date "+%Y%m%d"`
 fi
 
 #
 #
 #
-rm $outputdir/voc/*
-rm $outputdir/vessels/*
+rm $outputdir/voc/*.csv
+rm $outputdir/voc/*.tsv
+rm $outputdir/vessels/*.csv
 #
 # get the info/tsv files from rvdata
 #
