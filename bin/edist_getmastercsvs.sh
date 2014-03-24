@@ -1,10 +1,17 @@
 #!/bin/bash
-# edist_getmasters.sh
+# edist_getmastercsvs.sh
+#
+# Brief Description:
+# Go to google and grab the 3 master spreadsheets, stashing them in ../edist_cfg directory
+#
+# Arguments:
+# None
+#
 # TODO
 # ----
 # Make sure that no N/As appear in the csvs grabbed from Google
 #
-topdir=~drumbeat/git/cruise_maint
+topdir=..
 configdir=$topdir/edist_cfg
 vocabdir=$topdir/vocabs
 bindir=$topdir/bin
